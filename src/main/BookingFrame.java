@@ -153,9 +153,14 @@ public class BookingFrame extends JFrame implements ActionListener, ListSelectio
 		String cmd = e.getActionCommand();
 
 		if (cmd.equals("시간선택")) {
-			// 시간선택화면 띄우기(선택한거 정보가지고 이동)
-			new TimeFrame().setVisible(true); // 시간선택화면 띄우기
-			setVisible(false); // 현재화면 안보이게
+			
+			if (movie.getSelectedValue() == null || loc.getSelectedValue() == null) {
+				JOptionPane.showMessageDialog(null, "영화와 지점을 선택해 주세요");
+			} else {
+				// 시간선택화면 띄우기(선택한거 정보가지고 이동)
+				new TimeFrame().setVisible(true); // 시간선택화면 띄우기
+				setVisible(false); // 현재화면 안보이게
+			}
 			
 		} else if (cmd.equals("취소")) {
 			// 선택한거 취소
