@@ -25,19 +25,19 @@ import java.awt.Font;
 public class MainFrame extends JFrame implements ActionListener{
 
 	private JPanel contentPane;
-	private ImageIcon icon1 = new ImageIcon(MainFrame.class.getResource("/mainmenu/007.jpg"));
+	private ImageIcon icon1 = new ImageIcon(MainFrame.class.getResource("/main/007.jpg"));
 	Image img1 = icon1.getImage();
 	Image updateImg1 = img1.getScaledInstance(150, 250, Image.SCALE_SMOOTH);
     ImageIcon updateIcon1 = new ImageIcon(updateImg1);
-    private ImageIcon icon2 = new ImageIcon(MainFrame.class.getResource("/mainmenu/miracle.jpg"));
+    private ImageIcon icon2 = new ImageIcon(MainFrame.class.getResource("/main/miracle.jpg"));
     Image img2 = icon2.getImage();
     Image updateImg2 = img2.getScaledInstance(150, 250, Image.SCALE_SMOOTH);
     ImageIcon updateIcon2 = new ImageIcon(updateImg2);
-    private ImageIcon icon3 = new ImageIcon(MainFrame.class.getResource("/mainmenu/voice.jpg"));
+    private ImageIcon icon3 = new ImageIcon(MainFrame.class.getResource("/main/voice.jpg"));
     Image img3 = icon3.getImage();
     Image updateImg3 = img3.getScaledInstance(150, 250, Image.SCALE_SMOOTH);
     ImageIcon updateIcon3 = new ImageIcon(updateImg3);
-    private ImageIcon icon4 = new ImageIcon(MainFrame.class.getResource("/mainmenu/zzanggu.jpg"));
+    private ImageIcon icon4 = new ImageIcon(MainFrame.class.getResource("/main/zzanggu.jpg"));
     Image img4 = icon4.getImage();
     Image updateImg4 = img4.getScaledInstance(150, 250, Image.SCALE_SMOOTH);
     ImageIcon updateIcon4 = new ImageIcon(updateImg4);
