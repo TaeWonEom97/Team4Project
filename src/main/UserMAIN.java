@@ -1,4 +1,4 @@
-package dao;
+package main;
 
 import java.util.List;
 import java.util.Scanner;
@@ -6,7 +6,7 @@ import java.util.Scanner;
 import dao.UserDAO;
 import dto.UserDTO;
 
-public class main {
+public class UserMAIN {
 
    
    

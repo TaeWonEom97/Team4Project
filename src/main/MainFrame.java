@@ -1,4 +1,4 @@
-package dao;
+package main;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
@@ -92,17 +92,17 @@ public class MainFrame extends JFrame implements ActionListener{
          setVisible(false); // 현재화면 안보이게
          
       } else if (cmd.equals("예매 조회")) {
-         new FindFrame().setVisible(true); // 조회화면 띄우기
+         new MvFindFrame().setVisible(true); // 조회화면 띄우기
          setVisible(false); // 현재화면 안보이게
          
       } else if (cmd.equals("로그인")) {
          // 로그인화면 띄우기(로그인상태 아닐때만)
-         new LoginFrame();
+         new LoginFrame().setVisible(true);
          setVisible(false); // 현재화면 안보이게
          
       } else if (cmd.equals("로그아웃")) {
          // 로그인화면 띄우기(로그인상태시 가진정보 지우고)
-         new LoginFrame().setVisible(true);
+         
          setVisible(false); // 현재화면 안보이게
       }
       

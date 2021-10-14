@@ -79,6 +79,7 @@ public class UserDAO {
              pstmt.setString(2, userpwd);
              
              rs = pstmt.executeQuery();
+             
              if (rs.next()) {
                 dto = new UserDTO();
                 dto.setUserid(rs.getString(1));               
@@ -100,44 +101,43 @@ public class UserDAO {
           return dto;
        }
       
+      // 예매 내역 확인
       public UserDTO getRow(String mvcode){
-          Connection con = null;
-           PreparedStatement pstmt = null;
-           ResultSet rs = null;
-           UserDTO dto1 = null;
-           
-           try {
-              String sql = "select * from customer_ch where mvcode = ?";
-            con = getConnection();
-            pstmt = con.prepareStatement(sql);
-            pstmt.setString(1, mvcode);
-            rs = pstmt.executeQuery();
-            
-            if(rs.next()) {
-               dto1 = new UserDTO();
-               dto1.setMvcode(rs.getString(1));
-               dto1.setUserid(rs.getString(2));
-               dto1.setMvname(rs.getString(3));
-               dto1.setMvtime(rs.getInt(4));
-               dto1.setLoc(rs.getString(5));
-               dto1.setSitnum(rs.getString(6));
-            }
-           }
-           catch (Exception e) {
-               e.printStackTrace();
-            }
-            finally {
-            try {
-               rs.close();
-               pstmt.close();
-               con.close();
-            } catch (Exception e2) {
-               e2.printStackTrace();
-            }
-            }
-            return dto1;
-           }
-   }
-
+       Connection con = null;
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
+        UserDTO dto1 = null;
+        
+        try {
+           String sql = "select * from customer_ch where mvcode = ?";
+         con = getConnection();
+         pstmt = con.prepareStatement(sql);
+         pstmt.setString(1, mvcode);
+         rs = pstmt.executeQuery();
+         
+         if(rs.next()) {
+            dto1 = new UserDTO();
+            dto1.setMvcode(rs.getString(1));
+            dto1.setUserid(rs.getString(2));
+            dto1.setMvname(rs.getString(3));
+            dto1.setMvtime(rs.getInt(4));
+            dto1.setLoc(rs.getString(5));
+            dto1.setSitnum(rs.getString(6));
+         }
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+         }
+         finally {
+         try {
+            rs.close();
+            pstmt.close();
+            con.close();
+         } catch (Exception e2) {
+            e2.printStackTrace();
+         }
+         }
+         return dto1;
+        }
 }
 

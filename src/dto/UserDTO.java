@@ -30,6 +30,7 @@ public class UserDTO {
    private int mvtime;
    private String loc; //상영관
    private String sitnum;//좌석
-   private String Mvcode;
+   private String mvcode;
+
    
 }

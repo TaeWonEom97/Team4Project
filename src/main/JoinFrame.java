@@ -1,4 +1,4 @@
-package dao;
+package main;
 
 import java.awt.EventQueue;
 import java.awt.Font;
@@ -14,6 +14,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
+import dao.UserDAO;
 import dto.UserDTO;
 
 import javax.swing.SwingConstants;
@@ -29,6 +30,7 @@ public class JoinFrame extends JFrame implements ActionListener {
    private JButton tfjoin2; 
    private JButton tfcancel;
    private JButton dbcheck;
+   Scanner sc = new Scanner(System.in);
    UserDAO dao = new UserDAO();
 
    /**
@@ -103,21 +105,21 @@ public class JoinFrame extends JFrame implements ActionListener {
       tfjoin2 = new JButton("\uD68C\uC6D0\uAC00\uC785");
       tfjoin2.addActionListener(new ActionListener() {
          public void actionPerformed(ActionEvent e) {
-        	 String cmd=e.getActionCommand();
-        		if(cmd.equals("회원가입")) {
-        	        String userid = tfUsername.getText();
-        	        String username = tfName.getText();
-        	        String userpwd = tfPassword.getText();
-        	        UserDTO dto = new UserDTO(userid, username, userpwd);
-        	        //System.out.println(dao.insert(dto)?"가입성공" :"실패")
-        	        
-        	        if(dao.insert(dto)==true) {
-        	        	JOptionPane.showMessageDialog(null, "가입성공");
-        	        }else {
-        	        	JOptionPane.showMessageDialog(null, "실패: 올바르게 작성해주세요");
-        	        }
-        	        System.out.println();
-        		}          
+            String cmd=e.getActionCommand();
+              if(cmd.equals("회원가입")) {
+                   String userid = tfUsername.getText();
+                   String username = tfName.getText();
+                   String userpwd = tfPassword.getText();
+                   UserDTO dto = new UserDTO(userid, username, userpwd);
+                   //System.out.println(dao.insert(dto)?"가입성공" :"실패")
+                   
+                   if(dao.insert(dto)==true) {
+                      JOptionPane.showMessageDialog(null, "가입성공");
+                   }else {
+                      JOptionPane.showMessageDialog(null, "실패: 올바르게 작성해주세요");
+                   }
+                   System.out.println();
+              }          
          }
       //});
       //JOptionPane.showMessageDialog(null, "가입성공");
@@ -145,6 +147,6 @@ public class JoinFrame extends JFrame implements ActionListener {
 
 @Override
 public void actionPerformed(ActionEvent e) {
-	
+   
 }
 }

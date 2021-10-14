@@ -1,4 +1,4 @@
-package dao;
+package main;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
@@ -118,6 +118,7 @@ public class BookingFrame extends JFrame implements ActionListener{
       String cmd = e.getActionCommand();
 
       if (cmd.equals("시간선택")) {
+    	  new TimeFrame().setVisible(true);
          // 시간선택화면 띄우기(선택한거 정보가지고 이동)
          
          setVisible(false); // 현재화면 안보이게

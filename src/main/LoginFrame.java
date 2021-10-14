@@ -1,4 +1,4 @@
-package dao;
+package main;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
@@ -7,6 +7,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
+import dao.UserDAO;
 import dto.UserDTO;
 
 import javax.swing.JTextField;
@@ -93,22 +94,23 @@ public class LoginFrame extends JFrame {
       btnNewButton_1.setBounds(81, 230, 112, 23);
       contentPane.add(btnNewButton_1);
       btnNewButton_1.addActionListener(new ActionListener() {
-		
-		@Override
-		public void actionPerformed(ActionEvent e) {
+      
+      @Override
+      public void actionPerformed(ActionEvent e) {
             String userid = textField_1.getText();
             String userpwd = textField_2.getText();
-            
+            UserDTO dto = new UserDTO(userid,userpwd);
             if(dao.getRow(userid, userpwd)!=null) {
-	        	JOptionPane.showMessageDialog(null, "로그인성공");
-	        	new MainFrame
-	        }else {
-	        	JOptionPane.showMessageDialog(null, "로그인 실패");
-	        }
-	        System.out.println();            
-			
-		}
-	});
+              JOptionPane.showMessageDialog(null, "로그인성공");
+              new MainFrame().setVisible(true);
+              setVisible(false);
+           }else {
+              JOptionPane.showMessageDialog(null, "로그인 실패");
+           }
+           System.out.println();            
+         
+      }
+   });
    }
 
 }
