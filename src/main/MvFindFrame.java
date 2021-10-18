@@ -76,7 +76,7 @@ public class MvFindFrame extends JFrame{
 			public void actionPerformed(ActionEvent e) {
 				String cmd = e.getActionCommand();
 				if(cmd.equals("확인")) {
-					new FindFrame().setVisible(true);
+					new FindFrame(textField.getText()).setVisible(true);
 					setVisible(false);
 				}
 			}

@@ -147,7 +147,7 @@ public class MainFrame extends JFrame implements ActionListener{
 			setVisible(false); // 현재화면 안보이게
 			
 		} else if (cmd.equals("예매 조회")) {
-			new FindFrame().setVisible(true); // 조회화면 띄우기
+			new MvFindFrame().setVisible(true); // 조회화면 띄우기
 			setVisible(false); // 현재화면 안보이게
 			
 		} else if (cmd.equals("로그인")) {

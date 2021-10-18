@@ -27,7 +27,7 @@ public class UserDTO {
    }
    private String userpwd;
    private String mvname;
-   private int mvtime;
+   private String mvtime;
    private String loc; //상영관
    private String sitnum;//좌석
    private String mvcode;

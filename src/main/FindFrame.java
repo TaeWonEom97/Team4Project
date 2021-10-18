@@ -6,6 +6,10 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import dao.UserDAO;
+import dto.UserDTO;
+
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
@@ -18,27 +22,38 @@ import javax.swing.JButton;
 public class FindFrame extends JFrame implements ActionListener {
 
    private JPanel contentPane;
+   UserDAO dao = new UserDAO();
+   private String mvCode;
 
    /**
     * Launch the application.
     */
-   public static void main(String[] args) {
-      EventQueue.invokeLater(new Runnable() {
-         public void run() {
-            try {
-               FindFrame frame = new FindFrame();
-               frame.setVisible(true);
-            } catch (Exception e) {
-               e.printStackTrace();
-            }
-         }
-      });
-   }
+//   public static void main(String[] args) {
+//      EventQueue.invokeLater(new Runnable() {
+//         public void run() {
+//            try {
+//               FindFrame frame = new FindFrame();
+//               frame.setVisible(true);
+//            } catch (Exception e) {
+//               e.printStackTrace();
+//            }
+//         }
+//      });
+//   }
 
    /**
     * Create the frame.
     */
-   public FindFrame() {
+   public FindFrame(String mvCode) {
+	   
+	   this.mvCode=mvCode;
+	   
+	   
+	  UserDTO dto = dao.getRow1(mvCode);   
+	   
+	   
+	   
+	   
       setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
       setBounds(100, 100, 450, 300);
       contentPane = new JPanel();
@@ -60,25 +75,26 @@ public class FindFrame extends JFrame implements ActionListener {
       JLabel lbl1 = new JLabel("영화 제목 : ");
       panel_1.add(lbl1);
       
-      JLabel lblmname = new JLabel("");
+      JLabel lblmname = new JLabel(dto.getMvname());
+      
       panel_1.add(lblmname);
       
       JLabel lbl2 = new JLabel("상영 지역 : ");
       panel_1.add(lbl2);
       
-      JLabel lblloc = new JLabel("");
+      JLabel lblloc = new JLabel(dto.getLoc());
       panel_1.add(lblloc);
       
       JLabel lbl3 = new JLabel("상영 시간 : ");
       panel_1.add(lbl3);
       
-      JLabel lbltime = new JLabel("");
+      JLabel lbltime = new JLabel(dto.getMvtime());
       panel_1.add(lbltime);
       
       JLabel lbl4 = new JLabel("좌석 번호 : ");
       panel_1.add(lbl4);
       
-      JLabel lblsitnum = new JLabel("");
+      JLabel lblsitnum = new JLabel(dto.getSitnum());
       panel_1.add(lblsitnum);
       
       JPanel panel_2 = new JPanel();
