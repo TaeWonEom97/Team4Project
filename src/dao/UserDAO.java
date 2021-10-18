@@ -140,5 +140,39 @@ public class UserDAO {
             return dto1;
            }
 
+      public boolean insertMv(UserDTO dto) {
+          boolean flag=false;
+          
+          Connection con=null;
+          PreparedStatement pstmt=null;
+          try {
+             con=getConnection();
+             String sql ="insert into ch(mvname,loc,mvtime)values(?,?,?)";
+             pstmt=con.prepareStatement(sql);
+        
+             pstmt.setString(1, dto.getMvname());
+             pstmt.setString(2, dto.getLoc());
+             pstmt.setString(3, dto.getMvtime());
+            
+             int result=pstmt.executeUpdate();
+             if(result>0) {
+                flag=true;
+             }
+          } catch (Exception e) {
+             e.printStackTrace();
+          }finally {
+             try {
+                pstmt.close();
+                con.close();
+             } catch (Exception e2) {
+                e2.printStackTrace();
+             }
+          }
+ 
+ 
+          return flag;
+ 
+    }
+      
 }
 
