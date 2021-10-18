@@ -424,7 +424,7 @@ public class SeatFrame extends JFrame implements ActionListener {
    public void actionPerformed(ActionEvent e) {
       String cmd = e.getActionCommand();
 
-      switch (cmd) {
+      switch (cmd) { //버튼마다 누를때 꺼지게
 
       case "1":
          btnNewButton.setEnabled(false);
