@@ -67,6 +67,7 @@ public class BookingFrame extends JFrame implements ActionListener, ListSelectio
    String mname;
    String mloc;
    String mtime;
+   String mvcode;
 
    /**
     * Launch the application.
@@ -227,6 +228,8 @@ public class BookingFrame extends JFrame implements ActionListener, ListSelectio
 			f.setMvName(lblmovie.getText());
 			f.setMvLoc(lblloc.getText());
 			f.setMvTime(lbltime.getText());
+			f.setMvCode(lblmvcode.getText());
+			
 			f.setVisible(true); // 시간선택화면 띄우기
             setVisible(false); // 현재화면 안보이게
          }

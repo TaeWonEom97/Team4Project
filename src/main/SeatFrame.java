@@ -25,6 +25,7 @@ public class SeatFrame extends JFrame implements ActionListener {
    private String mvName;
    private String mvLoc;
    private String mvTime;
+   private String mvCode;
    UserDAO dao = new UserDAO();
    JButton btnNewButton;
    JButton btnNewButton_1;
@@ -101,7 +102,11 @@ public class SeatFrame extends JFrame implements ActionListener {
 	public void setMvTime(String mvTime) {
 		this.mvTime = mvTime;
 	}
-   /**
+	
+   public void setMvCode(String mvCode) {
+		this.mvCode = mvCode;
+	}
+/**
     * Create the frame.
     */
 
@@ -2884,6 +2889,7 @@ public class SeatFrame extends JFrame implements ActionListener {
 			dto.setMvname(this.mvName);
 			dto.setLoc(this.mvLoc);
 			dto.setMvtime(this.mvTime);
+			dto.setMvcode(this.mvCode);
 			if(dao.insertMv(dto)) {
 				JOptionPane.showMessageDialog(null, "예매완료");
 				new MainFrame().setVisible(true);

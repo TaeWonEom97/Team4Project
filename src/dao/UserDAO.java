@@ -102,7 +102,7 @@ public class UserDAO {
        }
       
       // 예매 내역 확인
-      public UserDTO getRow1(String mvcode){
+      public UserDTO getRow1(String userid){
           Connection con = null;
            PreparedStatement pstmt = null;
            ResultSet rs = null;
@@ -110,9 +110,9 @@ public class UserDAO {
            
            try {
             con = getConnection();
-            String sql = "select * from customer_ch where mvcode = ?";
+            String sql = "select * from customer_ch where userid = ?";
             pstmt = con.prepareStatement(sql);
-            pstmt.setString(1, mvcode);
+            pstmt.setString(1, userid);
             rs = pstmt.executeQuery();
             dto1 = new UserDTO();
             
@@ -147,12 +147,13 @@ public class UserDAO {
           PreparedStatement pstmt=null;
           try {
              con=getConnection();
-             String sql ="insert into ch(mvname,loc,mvtime)values(?,?,?)";
+             String sql ="insert into ch2(mvname,loc,mvtime,mvcode)values(?,?,?,?)";
              pstmt=con.prepareStatement(sql);
         
              pstmt.setString(1, dto.getMvname());
              pstmt.setString(2, dto.getLoc());
              pstmt.setString(3, dto.getMvtime());
+             pstmt.setString(4, dto.getMvcode());
             
              int result=pstmt.executeUpdate();
              if(result>0) {
