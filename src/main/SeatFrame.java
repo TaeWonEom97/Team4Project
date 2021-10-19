@@ -2955,9 +2955,16 @@ public class SeatFrame extends JFrame implements ActionListener {
          dto.setMvcode(this.mvCode);
          dto.setSitnum(lblSeatNum.getText());
          if(dao.insertMv(dto)) {
-            JOptionPane.showMessageDialog(null, "예매완료");
-            new MainFrame().setVisible(true);
-               setVisible(false); // 현재화면 안보이게
+				
+				String List = "예매내역\n";
+				List += "영화제목 : " + mvName + "\n";
+				List += "상영지역 : " + mvLoc + "\n";
+				List += "상영시간 : " + mvTime + "\n";
+				List += "좌석번호 : " + lblSeatNum.getText() + "\n";
+				
+				JOptionPane.showMessageDialog(null, List, "예매완료", JOptionPane.INFORMATION_MESSAGE);
+				new MainFrame().setVisible(true);
+		         setVisible(false); // 현재화면 안보이게
             
          }else {
             JOptionPane.showMessageDialog(null, "실패: 올바르게 작성해주세요");

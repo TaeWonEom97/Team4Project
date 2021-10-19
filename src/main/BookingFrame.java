@@ -229,6 +229,7 @@ public class BookingFrame extends JFrame implements ActionListener, ListSelectio
          if (movie.getSelectedValue() == null || loc.getSelectedValue() == null || time.getSelectedValue() == null) {
             JOptionPane.showMessageDialog(null, "영화, 지점, 시간을 선택해 주세요");
          } else {
+
      		SeatFrame f=new SeatFrame();
 			f.setMvName(lblmovie.getText());
 			f.setMvLoc(lblloc.getText());
@@ -248,16 +249,9 @@ public class BookingFrame extends JFrame implements ActionListener, ListSelectio
          lblmovie.setText("");
          lblloc.setText("");
          lbltime.setText("");
+         lblmvcode.setText("");
 
       } else if (cmd.equals("처음으로")) {
-         // 선택한거 취소하고 메인화면으로
-         movie.clearSelection();
-         loc.clearSelection();
-         time.clearSelection();
-         lblNewLabel.setIcon(null);
-         lblmovie.setText("");
-         lblloc.setText("");
-         lbltime.setText("");
          new MainFrame().setVisible(true); // 메인화면 띄우기
          setVisible(false); // 현재화면 안보이게
       }
