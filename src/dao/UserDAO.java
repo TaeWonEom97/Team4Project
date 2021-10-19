@@ -144,9 +144,7 @@ public class UserDAO {
 		PreparedStatement pstmt = null;
 		try {
 			con = getConnection();
-
 			String sql = "insert into customer_ch(userid,mvname,loc,mvtime,mvcode,sitnum)values(?,?,?,?,?,?)";
-
 			pstmt = con.prepareStatement(sql);
 
 			pstmt.setString(1, dto.getUserid());
@@ -175,24 +173,22 @@ public class UserDAO {
 
 	}
 
-	public boolean deleteMv(UserDTO dto) {
-		boolean flag = false;
+	public boolean deleteMv(String userid) {
 
 		Connection con = null;
 		PreparedStatement pstmt = null;
+		boolean deleteFlag = false;
+
 		try {
 			con = getConnection();
-
-			String sql = "delete customer_ch where userid =?";
-
+			String sql = "delete customer_ch where userid=?";
 			pstmt = con.prepareStatement(sql);
-
-			pstmt.setString(1, dto.getUserid());
-
+			pstmt.setString(1, userid);
 			int result = pstmt.executeUpdate();
 			if (result > 0) {
-				flag = true;
+				deleteFlag = true;
 			}
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -203,9 +199,7 @@ public class UserDAO {
 				e2.printStackTrace();
 			}
 		}
-
-		return flag;
-
+		return deleteFlag;
 	}
 
 }

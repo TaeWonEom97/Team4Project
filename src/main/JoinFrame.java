@@ -131,6 +131,12 @@ public class JoinFrame extends JFrame implements ActionListener {
       tfjoin.add(tfjoin2);
       
       tfcancel = new JButton("\uCDE8\uC18C");
+      tfcancel.addActionListener(new ActionListener() {
+      	public void actionPerformed(ActionEvent e) {
+      		new MainFrame().setVisible(true); // 조회화면 띄우기
+			setVisible(false);
+      	}
+      });
       tfcancel.setBounds(222, 333, 141, 35);
       tfjoin.add(tfcancel);
       

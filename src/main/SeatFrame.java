@@ -2944,33 +2944,32 @@ public class SeatFrame extends JFrame implements ActionListener {
       
       if (cmd.equals("예매하기")) {
          // 메인 화면 띄우기 
-
-    	  if (lblSeatNum.getText().equals("")) {
-    		  JOptionPane.showMessageDialog(null, "좌석을 선택해 주세요");
-		} else {
-    	  UserDTO dto = new UserDTO();
-			dto.setMvname(this.mvName);
-			dto.setLoc(this.mvLoc);
-			dto.setMvtime(this.mvTime);
-			dto.setMvcode(this.mvCode);
-			dto.setSitnum(lblSeatNum.getText());
-			if(dao.insertMv(dto)) {
+         if (lblSeatNum.getText().equals("")) {
+            JOptionPane.showMessageDialog(null, "좌석을 선택해 주세요");
+      } else {
+         UserDTO dto = new UserDTO();
+         dto.setUserid(this.userid);
+         dto.setMvname(this.mvName);
+         dto.setLoc(this.mvLoc);
+         dto.setMvtime(this.mvTime);
+         dto.setMvcode(this.mvCode);
+         dto.setSitnum(lblSeatNum.getText());
+         if(dao.insertMv(dto)) {
 				
 				String List = "예매내역\n";
 				List += "영화제목 : " + mvName + "\n";
-				List += "장소 : " + mvLoc + "\n";
-				List += "시간 : " + mvTime + "\n";
+				List += "상영지역 : " + mvLoc + "\n";
+				List += "상영시간 : " + mvTime + "\n";
 				List += "좌석번호 : " + lblSeatNum.getText() + "\n";
 				
 				JOptionPane.showMessageDialog(null, List, "예매완료", JOptionPane.INFORMATION_MESSAGE);
 				new MainFrame().setVisible(true);
 		         setVisible(false); // 현재화면 안보이게
-				
-			}else {
-				JOptionPane.showMessageDialog(null, "실패: 올바르게 작성해주세요");
-			}
-		}
-
+            
+         }else {
+            JOptionPane.showMessageDialog(null, "실패: 올바르게 작성해주세요");
+         }
+      }
       } else if (cmd.equals("이전으로")) {
          // 시간선택 화면 띄우기
          new MainFrame().setVisible(true);

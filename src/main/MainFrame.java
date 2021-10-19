@@ -132,6 +132,10 @@ public class MainFrame extends JFrame implements ActionListener{
 		btnLogin.addActionListener(this);
 		panel_2.add(btnLogin);
 		
+		JButton btnjoin = new JButton("회원가입");
+		btnjoin.addActionListener(this);
+		panel_2.add(btnjoin);
+		
 		JButton btnLogout = new JButton("로그아웃");
 		btnLogout.addActionListener(this);
 		panel_2.add(btnLogout);
@@ -156,6 +160,12 @@ public class MainFrame extends JFrame implements ActionListener{
 			setVisible(false); // 현재화면 안보이게
 			
 		} else if (cmd.equals("로그인")) {
+			// 로그인상태 아닐때만 작동하게
+			
+			new LoginFrame().setVisible(true); // 로그인화면 띄우기
+			setVisible(false); // 현재화면 안보이게
+			
+		} else if (cmd.equals("회원가입")) {
 			// 로그인상태 아닐때만 작동하게
 			
 			new JoinFrame().setVisible(true); // 로그인화면 띄우기
