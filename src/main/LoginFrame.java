@@ -86,9 +86,18 @@ public class LoginFrame extends JFrame {
       textField_2.setBounds(217, 167, 124, 37);
       contentPane.add(textField_2);
       
-      JButton btnNewButton = new JButton("\uD68C\uC6D0\uAC00\uC785");
+      JButton btnNewButton = new JButton("취소");
       btnNewButton.setBounds(228, 230, 112, 23);
       contentPane.add(btnNewButton);
+      btnNewButton.addActionListener(new ActionListener() {
+		
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			new MainFrame().setVisible(true); // 조회화면 띄우기
+			setVisible(false);
+		}
+	});
+      
       
       JButton btnNewButton_1 = new JButton("\uB85C\uADF8\uC778");
       btnNewButton_1.setBounds(81, 230, 112, 23);
