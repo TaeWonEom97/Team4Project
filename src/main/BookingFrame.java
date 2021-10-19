@@ -68,8 +68,13 @@ public class BookingFrame extends JFrame implements ActionListener, ListSelectio
    String mloc;
    String mtime;
    String mvcode;
+   String userid;
 
-   /**
+   public void setUserid(String userid) {
+	this.userid = userid;
+}
+
+/**
     * Launch the application.
     */
    public static void main(String[] args) {
@@ -224,13 +229,14 @@ public class BookingFrame extends JFrame implements ActionListener, ListSelectio
          if (movie.getSelectedValue() == null || loc.getSelectedValue() == null || time.getSelectedValue() == null) {
             JOptionPane.showMessageDialog(null, "영화, 지점, 시간을 선택해 주세요");
          } else {
-           SeatFrame f=new SeatFrame();
-         f.setMvName(lblmovie.getText());
-         f.setMvLoc(lblloc.getText());
-         f.setMvTime(lbltime.getText());
-         f.setMvCode(lblmvcode.getText());
-         
-         f.setVisible(true); // 시간선택화면 띄우기
+
+     		SeatFrame f=new SeatFrame();
+			f.setMvName(lblmovie.getText());
+			f.setMvLoc(lblloc.getText());
+			f.setMvTime(lbltime.getText());
+			f.setMvCode(lblmvcode.getText());
+			f.setUserId(userid);
+			f.setVisible(true); // 시간선택화면 띄우기
             setVisible(false); // 현재화면 안보이게
          }
 

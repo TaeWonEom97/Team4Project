@@ -115,6 +115,8 @@ public class JoinFrame extends JFrame implements ActionListener {
                    
                    if(dao.insert(dto)==true) {
                       JOptionPane.showMessageDialog(null, "가입성공");
+                      new MainFrame().setVisible(true); // 메인화면 보이게
+                      setVisible(false); // 현재화면 안보이게
                    }else {
                       JOptionPane.showMessageDialog(null, "실패: 올바르게 작성해주세요");
                    }

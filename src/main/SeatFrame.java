@@ -22,6 +22,7 @@ import java.awt.event.ActionEvent;
 public class SeatFrame extends JFrame implements ActionListener {
 
    private JPanel contentPane;
+   private String userid;
    private String mvName;
    private String mvLoc;
    private String mvTime;
@@ -93,20 +94,23 @@ public class SeatFrame extends JFrame implements ActionListener {
       });
    }
    public void setMvName(String mvName) {
-		this.mvName = mvName;
-	}
+      this.mvName = mvName;
+   }
 
-	public void setMvLoc(String mvLoc) {
-		this.mvLoc = mvLoc;
-	}
+   public void setMvLoc(String mvLoc) {
+      this.mvLoc = mvLoc;
+   }
 
-	public void setMvTime(String mvTime) {
-		this.mvTime = mvTime;
-	}
-	public void setMvCode(String mvCode) {
-		this.mvCode = mvCode;
-	}
-	
+   public void setMvTime(String mvTime) {
+      this.mvTime = mvTime;
+   }
+   public void setMvCode(String mvCode) {
+      this.mvCode = mvCode;
+   }
+   public void setUserId(String userid) {
+	      this.userid = userid;
+	   }
+   
    /**
     * Create the frame.
     */
@@ -2940,6 +2944,7 @@ public class SeatFrame extends JFrame implements ActionListener {
       
       if (cmd.equals("예매하기")) {
          // 메인 화면 띄우기 
+
     	  if (lblSeatNum.getText().equals("")) {
     		  JOptionPane.showMessageDialog(null, "좌석을 선택해 주세요");
 		} else {
@@ -2965,6 +2970,7 @@ public class SeatFrame extends JFrame implements ActionListener {
 				JOptionPane.showMessageDialog(null, "실패: 올바르게 작성해주세요");
 			}
 		}
+
       } else if (cmd.equals("이전으로")) {
          // 시간선택 화면 띄우기
          new MainFrame().setVisible(true);

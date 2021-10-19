@@ -19,11 +19,12 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 
+
 public class FindFrame extends JFrame implements ActionListener {
 
    private JPanel contentPane;
    UserDAO dao = new UserDAO();
-   private String mvCode;
+   private String userid;
 
    /**
     * Launch the application.
@@ -44,12 +45,12 @@ public class FindFrame extends JFrame implements ActionListener {
    /**
     * Create the frame.
     */
-   public FindFrame(String mvCode) {
+   public FindFrame(String userid) {
 	   
-	   this.mvCode=mvCode;
+	   this.userid=userid;
 	   
 	   
-	  UserDTO dto = dao.getRow1(mvCode);   
+	  UserDTO dto = dao.getRow1(userid);   
 	   
 	   
 	   
@@ -104,7 +105,7 @@ public class FindFrame extends JFrame implements ActionListener {
       btnok.addActionListener(this);
       panel_2.add(btnok);
       
-      JButton btnout = new JButton("로그아웃");
+      JButton btnout = new JButton("예매취소");
       btnout.addActionListener(this);
       panel_2.add(btnout);
    }
@@ -116,7 +117,7 @@ public class FindFrame extends JFrame implements ActionListener {
          new MainFrame().setVisible(true); // 메인화면 보이게
          setVisible(false); // 현재화면 안보이게
          
-      } else if (cmd.equals("로그아웃")) {
+      } else if (cmd.equals("예매취소")) {
          // 가진정보 지우고 로그인화면 띄우기
          new LoginFrame().setVisible(true); // 로그인화면 띄우기
          setVisible(false); // 현재화면 안보이게
