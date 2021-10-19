@@ -13,7 +13,7 @@ import lombok.ToString;
 @AllArgsConstructor
 public class UserDTO {
    private String username;
-   public UserDTO(String username, String userid, String userpwd) {
+   public UserDTO(String userid, String username, String userpwd) {
       super();
       this.username = username;
       this.userid = userid;
