@@ -147,13 +147,15 @@ public class UserDAO {
           PreparedStatement pstmt=null;
           try {
              con=getConnection();
-             String sql ="insert into ch2(mvname,loc,mvtime,mvcode)values(?,?,?,?)";
+             String sql ="insert into customer_ch(userid,mvname,loc,mvtime,mvcode,sitnum)values(?,?,?,?,?,?)";
              pstmt=con.prepareStatement(sql);
         
-             pstmt.setString(1, dto.getMvname());
-             pstmt.setString(2, dto.getLoc());
-             pstmt.setString(3, dto.getMvtime());
-             pstmt.setString(4, dto.getMvcode());
+             pstmt.setString(1, dto.getUserid());
+             pstmt.setString(2, dto.getMvname());
+             pstmt.setString(3, dto.getLoc());
+             pstmt.setString(4, dto.getMvtime());
+             pstmt.setString(5, dto.getMvcode());
+             pstmt.setString(6, dto.getSitnum());
             
              int result=pstmt.executeUpdate();
              if(result>0) {

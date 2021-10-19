@@ -19,11 +19,12 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 
+
 public class FindFrame extends JFrame implements ActionListener {
 
    private JPanel contentPane;
    UserDAO dao = new UserDAO();
-   private String mvCode;
+   private String userid;
 
    /**
     * Launch the application.
@@ -44,12 +45,12 @@ public class FindFrame extends JFrame implements ActionListener {
    /**
     * Create the frame.
     */
-   public FindFrame(String mvCode) {
+   public FindFrame(String userid) {
 	   
-	   this.mvCode=mvCode;
+	   this.userid=userid;
 	   
 	   
-	  UserDTO dto = dao.getRow1(mvCode);   
+	  UserDTO dto = dao.getRow1(userid);   
 	   
 	   
 	   

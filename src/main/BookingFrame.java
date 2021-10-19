@@ -68,8 +68,13 @@ public class BookingFrame extends JFrame implements ActionListener, ListSelectio
    String mloc;
    String mtime;
    String mvcode;
+   String userid;
 
-   /**
+   public void setUserid(String userid) {
+	this.userid = userid;
+}
+
+/**
     * Launch the application.
     */
    public static void main(String[] args) {
@@ -229,7 +234,7 @@ public class BookingFrame extends JFrame implements ActionListener, ListSelectio
 			f.setMvLoc(lblloc.getText());
 			f.setMvTime(lbltime.getText());
 			f.setMvCode(lblmvcode.getText());
-			
+			f.setUserId(userid);
 			f.setVisible(true); // 시간선택화면 띄우기
             setVisible(false); // 현재화면 안보이게
          }

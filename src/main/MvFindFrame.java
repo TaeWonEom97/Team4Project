@@ -19,6 +19,7 @@ import java.awt.event.ActionListener;
 
 import javax.swing.BoxLayout;
 
+
 public class MvFindFrame extends JFrame{
 
 	private JPanel contentPane;
@@ -44,7 +45,7 @@ public class MvFindFrame extends JFrame{
 	 * Create the frame.
 	 */
 	public MvFindFrame() {
-		setTitle("영화코드 조회");
+		setTitle("영화예매 조회");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();

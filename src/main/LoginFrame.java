@@ -99,10 +99,12 @@ public class LoginFrame extends JFrame {
       public void actionPerformed(ActionEvent e) {
             String userid = textField_1.getText();
             String userpwd = textField_2.getText();
-            UserDTO dto = new UserDTO(userid,userpwd);
+//            UserDTO dto = new UserDTO(userid,userpwd);
             if(dao.getRow(userid, userpwd)!=null) {
               JOptionPane.showMessageDialog(null, "로그인성공");
-              new MainFrame().setVisible(true);
+              MainFrame f=new MainFrame();
+              f.setUserid(userid);
+              f.setVisible(true);
               setVisible(false);
            }else {
               JOptionPane.showMessageDialog(null, "로그인 실패");

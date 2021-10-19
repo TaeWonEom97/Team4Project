@@ -22,6 +22,7 @@ import javax.swing.SwingConstants;
 import java.awt.FlowLayout;
 import java.awt.Font;
 
+
 public class MainFrame extends JFrame implements ActionListener{
 
 	private JPanel contentPane;
@@ -41,10 +42,12 @@ public class MainFrame extends JFrame implements ActionListener{
     Image img4 = icon4.getImage();
     Image updateImg4 = img4.getScaledInstance(150, 250, Image.SCALE_SMOOTH);
     ImageIcon updateIcon4 = new ImageIcon(updateImg4);
-
-	/**
-	 * Launch the application.
-	 */
+    private String userid;
+	
+    public void setUserid(String userid) {
+		this.userid = userid;
+	}
+    
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -143,7 +146,9 @@ public class MainFrame extends JFrame implements ActionListener{
 			setVisible(false); // 현재화면 안보이게
 			
 		} else if (cmd.equals("영화 예매")) {
-			new BookingFrame().setVisible(true); // 예매화면 띄우기
+			BookingFrame f=new BookingFrame();
+			f.setUserid(userid);
+			f.setVisible(true); // 예매화면 띄우기
 			setVisible(false); // 현재화면 안보이게
 			
 		} else if (cmd.equals("예매 조회")) {
