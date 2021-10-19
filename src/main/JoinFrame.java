@@ -70,15 +70,15 @@ public class JoinFrame extends JFrame implements ActionListener {
       lblJoin.setBounds(138, 26, 150, 35);
       tfjoin.add(lblJoin);
       
-      JLabel lblUsername = new JLabel("password");
+      JLabel lblUsername = new JLabel("비밀번호");
       lblUsername.setBounds(52, 164, 69, 20);
       tfjoin.add(lblUsername);
       
-      JLabel label = new JLabel("username");
+      JLabel label = new JLabel("아이디");
       label.setBounds(52, 114, 69, 20);
       tfjoin.add(label);
       
-      JLabel lblName = new JLabel("name");
+      JLabel lblName = new JLabel("이름");
       lblName.setBounds(52, 211, 69, 20);
       tfjoin.add(lblName);
       
