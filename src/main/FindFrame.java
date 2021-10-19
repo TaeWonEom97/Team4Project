@@ -105,7 +105,7 @@ public class FindFrame extends JFrame implements ActionListener {
       btnok.addActionListener(this);
       panel_2.add(btnok);
       
-      JButton btnout = new JButton("로그아웃");
+      JButton btnout = new JButton("예매취소");
       btnout.addActionListener(this);
       panel_2.add(btnout);
    }
