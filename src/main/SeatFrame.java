@@ -25,6 +25,7 @@ public class SeatFrame extends JFrame implements ActionListener {
    private String mvName;
    private String mvLoc;
    private String mvTime;
+   private String mvCode;
    UserDAO dao = new UserDAO();
    JButton btnNewButton;
    JButton btnNewButton_1;
@@ -74,6 +75,7 @@ public class SeatFrame extends JFrame implements ActionListener {
    JButton btnNewButton_45;
    JButton btnNewButton_46;
    JButton btnNewButton_47;
+   JLabel lblSeatNum;
 
    /**
     * Launch the application.
@@ -101,6 +103,10 @@ public class SeatFrame extends JFrame implements ActionListener {
 	public void setMvTime(String mvTime) {
 		this.mvTime = mvTime;
 	}
+	public void setMvCode(String mvCode) {
+		this.mvCode = mvCode;
+	}
+	
    /**
     * Create the frame.
     */
@@ -417,6 +423,12 @@ public class SeatFrame extends JFrame implements ActionListener {
       btnNewButton_49.setBounds(436, 634, 95, 35);
       btnNewButton_49.addActionListener(this);
       contentPane.add(btnNewButton_49);
+      
+      lblSeatNum = new JLabel("");
+      lblSeatNum.setForeground(Color.LIGHT_GRAY);
+      lblSeatNum.setFont(new Font("돋움", Font.PLAIN, 25));
+      lblSeatNum.setBounds(78, 647, 78, 22);
+      contentPane.add(lblSeatNum);
 
    }
 
@@ -475,6 +487,7 @@ public class SeatFrame extends JFrame implements ActionListener {
          btnNewButton_45.setEnabled(true);
          btnNewButton_46.setEnabled(true);
          btnNewButton_47.setEnabled(true);
+         lblSeatNum.setText("A"+cmd);
 
          break;
       case "2":
@@ -526,6 +539,7 @@ public class SeatFrame extends JFrame implements ActionListener {
          btnNewButton_45.setEnabled(true);
          btnNewButton_46.setEnabled(true);
          btnNewButton_47.setEnabled(true);
+         lblSeatNum.setText("A"+cmd);
 
          break;
       case "3":
@@ -577,6 +591,7 @@ public class SeatFrame extends JFrame implements ActionListener {
          btnNewButton_45.setEnabled(true);
          btnNewButton_46.setEnabled(true);
          btnNewButton_47.setEnabled(true);
+         lblSeatNum.setText("A"+cmd);
 
          break;
       case "4":
@@ -628,6 +643,7 @@ public class SeatFrame extends JFrame implements ActionListener {
          btnNewButton_45.setEnabled(true);
          btnNewButton_46.setEnabled(true);
          btnNewButton_47.setEnabled(true);
+         lblSeatNum.setText("A"+cmd);
 
          break;
       case "5":
@@ -679,6 +695,7 @@ public class SeatFrame extends JFrame implements ActionListener {
          btnNewButton_45.setEnabled(true);
          btnNewButton_46.setEnabled(true);
          btnNewButton_47.setEnabled(true);
+         lblSeatNum.setText("A"+cmd);
 
          break;
       case "6":
@@ -730,6 +747,7 @@ public class SeatFrame extends JFrame implements ActionListener {
          btnNewButton_45.setEnabled(true);
          btnNewButton_46.setEnabled(true);
          btnNewButton_47.setEnabled(true);
+         lblSeatNum.setText("A"+cmd);
 
          break;
       case "7":
@@ -781,6 +799,7 @@ public class SeatFrame extends JFrame implements ActionListener {
          btnNewButton_45.setEnabled(true);
          btnNewButton_46.setEnabled(true);
          btnNewButton_47.setEnabled(true);
+         lblSeatNum.setText("A"+cmd);
 
          break;
       case "8":
@@ -832,6 +851,7 @@ public class SeatFrame extends JFrame implements ActionListener {
          btnNewButton_45.setEnabled(true);
          btnNewButton_46.setEnabled(true);
          btnNewButton_47.setEnabled(true);
+         lblSeatNum.setText("A"+cmd);
 
          break;
       case "9":
@@ -883,6 +903,7 @@ public class SeatFrame extends JFrame implements ActionListener {
          btnNewButton_45.setEnabled(true);
          btnNewButton_46.setEnabled(true);
          btnNewButton_47.setEnabled(true);
+         lblSeatNum.setText("B"+cmd);
 
          break;
       case "10":
@@ -934,6 +955,7 @@ public class SeatFrame extends JFrame implements ActionListener {
          btnNewButton_45.setEnabled(true);
          btnNewButton_46.setEnabled(true);
          btnNewButton_47.setEnabled(true);
+         lblSeatNum.setText("B"+cmd);
 
          break;
       case "11":
@@ -985,6 +1007,7 @@ public class SeatFrame extends JFrame implements ActionListener {
          btnNewButton_45.setEnabled(true);
          btnNewButton_46.setEnabled(true);
          btnNewButton_47.setEnabled(true);
+         lblSeatNum.setText("B"+cmd);
 
          break;
       case "12":
@@ -1036,6 +1059,7 @@ public class SeatFrame extends JFrame implements ActionListener {
          btnNewButton_45.setEnabled(true);
          btnNewButton_46.setEnabled(true);
          btnNewButton_47.setEnabled(true);
+         lblSeatNum.setText("B"+cmd);
 
          break;
       case "13":
@@ -1087,6 +1111,7 @@ public class SeatFrame extends JFrame implements ActionListener {
          btnNewButton_45.setEnabled(true);
          btnNewButton_46.setEnabled(true);
          btnNewButton_47.setEnabled(true);
+         lblSeatNum.setText("B"+cmd);
 
          break;
       case "14":
@@ -1138,6 +1163,7 @@ public class SeatFrame extends JFrame implements ActionListener {
          btnNewButton_45.setEnabled(true);
          btnNewButton_46.setEnabled(true);
          btnNewButton_47.setEnabled(true);
+         lblSeatNum.setText("B"+cmd);
 
          break;
       case "15":
@@ -1189,6 +1215,7 @@ public class SeatFrame extends JFrame implements ActionListener {
          btnNewButton_45.setEnabled(true);
          btnNewButton_46.setEnabled(true);
          btnNewButton_47.setEnabled(true);
+         lblSeatNum.setText("B"+cmd);
 
          break;
       case "16":
@@ -1240,6 +1267,7 @@ public class SeatFrame extends JFrame implements ActionListener {
          btnNewButton_45.setEnabled(true);
          btnNewButton_46.setEnabled(true);
          btnNewButton_47.setEnabled(true);
+         lblSeatNum.setText("B"+cmd);
 
          break;
       case "17":
@@ -1291,6 +1319,7 @@ public class SeatFrame extends JFrame implements ActionListener {
          btnNewButton_45.setEnabled(true);
          btnNewButton_46.setEnabled(true);
          btnNewButton_47.setEnabled(true);
+         lblSeatNum.setText("C"+cmd);
 
          break;
       case "18":
@@ -1342,6 +1371,7 @@ public class SeatFrame extends JFrame implements ActionListener {
          btnNewButton_45.setEnabled(true);
          btnNewButton_46.setEnabled(true);
          btnNewButton_47.setEnabled(true);
+         lblSeatNum.setText("C"+cmd);
 
          break;
       case "19":
@@ -1393,6 +1423,7 @@ public class SeatFrame extends JFrame implements ActionListener {
          btnNewButton_45.setEnabled(true);
          btnNewButton_46.setEnabled(true);
          btnNewButton_47.setEnabled(true);
+         lblSeatNum.setText("C"+cmd);
 
          break;
       case "20":
@@ -1444,6 +1475,7 @@ public class SeatFrame extends JFrame implements ActionListener {
          btnNewButton_45.setEnabled(true);
          btnNewButton_46.setEnabled(true);
          btnNewButton_47.setEnabled(true);
+         lblSeatNum.setText("C"+cmd);
 
          break;
       case "21":
@@ -1495,6 +1527,7 @@ public class SeatFrame extends JFrame implements ActionListener {
          btnNewButton_45.setEnabled(true);
          btnNewButton_46.setEnabled(true);
          btnNewButton_47.setEnabled(true);
+         lblSeatNum.setText("C"+cmd);
 
          break;
       case "22":
@@ -1546,6 +1579,7 @@ public class SeatFrame extends JFrame implements ActionListener {
          btnNewButton_45.setEnabled(true);
          btnNewButton_46.setEnabled(true);
          btnNewButton_47.setEnabled(true);
+         lblSeatNum.setText("C"+cmd);
 
          break;
       case "23":
@@ -1597,6 +1631,7 @@ public class SeatFrame extends JFrame implements ActionListener {
          btnNewButton_45.setEnabled(true);
          btnNewButton_46.setEnabled(true);
          btnNewButton_47.setEnabled(true);
+         lblSeatNum.setText("C"+cmd);
 
          break;
       case "24":
@@ -1648,6 +1683,7 @@ public class SeatFrame extends JFrame implements ActionListener {
          btnNewButton_45.setEnabled(true);
          btnNewButton_46.setEnabled(true);
          btnNewButton_47.setEnabled(true);
+         lblSeatNum.setText("C"+cmd);
 
          break;
       case "25":
@@ -1699,6 +1735,7 @@ public class SeatFrame extends JFrame implements ActionListener {
          btnNewButton_45.setEnabled(true);
          btnNewButton_46.setEnabled(true);
          btnNewButton_47.setEnabled(true);
+         lblSeatNum.setText("D"+cmd);
 
          break;
       case "26":
@@ -1750,6 +1787,7 @@ public class SeatFrame extends JFrame implements ActionListener {
          btnNewButton_45.setEnabled(true);
          btnNewButton_46.setEnabled(true);
          btnNewButton_47.setEnabled(true);
+         lblSeatNum.setText("D"+cmd);
 
          break;
       case "27":
@@ -1801,6 +1839,7 @@ public class SeatFrame extends JFrame implements ActionListener {
          btnNewButton_45.setEnabled(true);
          btnNewButton_46.setEnabled(true);
          btnNewButton_47.setEnabled(true);
+         lblSeatNum.setText("D"+cmd);
 
          break;
       case "28":
@@ -1852,6 +1891,7 @@ public class SeatFrame extends JFrame implements ActionListener {
          btnNewButton_45.setEnabled(true);
          btnNewButton_46.setEnabled(true);
          btnNewButton_47.setEnabled(true);
+         lblSeatNum.setText("D"+cmd);
 
          break;
       case "29":
@@ -1903,6 +1943,7 @@ public class SeatFrame extends JFrame implements ActionListener {
          btnNewButton_45.setEnabled(true);
          btnNewButton_46.setEnabled(true);
          btnNewButton_47.setEnabled(true);
+         lblSeatNum.setText("D"+cmd);
 
          break;
       case "30":
@@ -1933,9 +1974,9 @@ public class SeatFrame extends JFrame implements ActionListener {
           btnNewButton_24.setEnabled(true);
           btnNewButton_25.setEnabled(true);
           btnNewButton_26.setEnabled(true);
-          btnNewButton_27.setEnabled(false);
+          btnNewButton_27.setEnabled(true);
           btnNewButton_28.setEnabled(true);
-          btnNewButton_29.setEnabled(true);
+          btnNewButton_29.setEnabled(false);
           btnNewButton_30.setEnabled(true);
           btnNewButton_31.setEnabled(true);
           btnNewButton_32.setEnabled(true);
@@ -1954,6 +1995,7 @@ public class SeatFrame extends JFrame implements ActionListener {
           btnNewButton_45.setEnabled(true);
           btnNewButton_46.setEnabled(true);
           btnNewButton_47.setEnabled(true);
+          lblSeatNum.setText("D"+cmd);
 
           break;
       case "31":
@@ -2005,6 +2047,7 @@ public class SeatFrame extends JFrame implements ActionListener {
           btnNewButton_45.setEnabled(true);
           btnNewButton_46.setEnabled(true);
           btnNewButton_47.setEnabled(true);
+          lblSeatNum.setText("D"+cmd);
 
           break;
       case "32":
@@ -2056,6 +2099,7 @@ public class SeatFrame extends JFrame implements ActionListener {
           btnNewButton_45.setEnabled(true);
           btnNewButton_46.setEnabled(true);
           btnNewButton_47.setEnabled(true);
+          lblSeatNum.setText("D"+cmd);
 
           break;
       case "33":
@@ -2107,6 +2151,7 @@ public class SeatFrame extends JFrame implements ActionListener {
           btnNewButton_45.setEnabled(true);
           btnNewButton_46.setEnabled(true);
           btnNewButton_47.setEnabled(true);
+          lblSeatNum.setText("E"+cmd);
 
           break;
       case "34":
@@ -2158,6 +2203,7 @@ public class SeatFrame extends JFrame implements ActionListener {
           btnNewButton_45.setEnabled(true);
           btnNewButton_46.setEnabled(true);
           btnNewButton_47.setEnabled(true);
+          lblSeatNum.setText("E"+cmd);
 
           break;
       case "35":
@@ -2209,6 +2255,7 @@ public class SeatFrame extends JFrame implements ActionListener {
           btnNewButton_45.setEnabled(true);
           btnNewButton_46.setEnabled(true);
           btnNewButton_47.setEnabled(true);
+          lblSeatNum.setText("E"+cmd);
 
           break;
       case "36":
@@ -2260,6 +2307,7 @@ public class SeatFrame extends JFrame implements ActionListener {
           btnNewButton_45.setEnabled(true);
           btnNewButton_46.setEnabled(true);
           btnNewButton_47.setEnabled(true);
+          lblSeatNum.setText("E"+cmd);
 
           break;
       case "37":
@@ -2311,6 +2359,7 @@ public class SeatFrame extends JFrame implements ActionListener {
           btnNewButton_45.setEnabled(true);
           btnNewButton_46.setEnabled(true);
           btnNewButton_47.setEnabled(true);
+          lblSeatNum.setText("E"+cmd);
 
           break;
       case "38":
@@ -2362,6 +2411,7 @@ public class SeatFrame extends JFrame implements ActionListener {
           btnNewButton_45.setEnabled(true);
           btnNewButton_46.setEnabled(true);
           btnNewButton_47.setEnabled(true);
+          lblSeatNum.setText("E"+cmd);
 
           break;
       case "39":
@@ -2413,6 +2463,7 @@ public class SeatFrame extends JFrame implements ActionListener {
           btnNewButton_45.setEnabled(true);
           btnNewButton_46.setEnabled(true);
           btnNewButton_47.setEnabled(true);
+          lblSeatNum.setText("E"+cmd);
 
           break;
       case "40":
@@ -2464,6 +2515,7 @@ public class SeatFrame extends JFrame implements ActionListener {
           btnNewButton_45.setEnabled(true);
           btnNewButton_46.setEnabled(true);
           btnNewButton_47.setEnabled(true);
+          lblSeatNum.setText("E"+cmd);
 
           break;
       case "41":
@@ -2515,6 +2567,7 @@ public class SeatFrame extends JFrame implements ActionListener {
           btnNewButton_45.setEnabled(true);
           btnNewButton_46.setEnabled(true);
           btnNewButton_47.setEnabled(true);
+          lblSeatNum.setText("F"+cmd);
 
           break;
       case "42":
@@ -2566,6 +2619,7 @@ public class SeatFrame extends JFrame implements ActionListener {
           btnNewButton_45.setEnabled(true);
           btnNewButton_46.setEnabled(true);
           btnNewButton_47.setEnabled(true);
+          lblSeatNum.setText("F"+cmd);
 
           break;
       case "43":
@@ -2617,6 +2671,7 @@ public class SeatFrame extends JFrame implements ActionListener {
           btnNewButton_45.setEnabled(true);
           btnNewButton_46.setEnabled(true);
           btnNewButton_47.setEnabled(true);
+          lblSeatNum.setText("F"+cmd);
 
           break;
       case "44":
@@ -2668,6 +2723,7 @@ public class SeatFrame extends JFrame implements ActionListener {
           btnNewButton_45.setEnabled(true);
           btnNewButton_46.setEnabled(true);
           btnNewButton_47.setEnabled(true);
+          lblSeatNum.setText("F"+cmd);
 
           break;
       case "45":
@@ -2719,6 +2775,7 @@ public class SeatFrame extends JFrame implements ActionListener {
           btnNewButton_45.setEnabled(true);
           btnNewButton_46.setEnabled(true);
           btnNewButton_47.setEnabled(true);
+          lblSeatNum.setText("F"+cmd);
 
           break;
       case "46":
@@ -2770,6 +2827,7 @@ public class SeatFrame extends JFrame implements ActionListener {
           btnNewButton_45.setEnabled(false);
           btnNewButton_46.setEnabled(true);
           btnNewButton_47.setEnabled(true);
+          lblSeatNum.setText("F"+cmd);
 
           break;
       case "47":
@@ -2821,6 +2879,7 @@ public class SeatFrame extends JFrame implements ActionListener {
           btnNewButton_45.setEnabled(true);
           btnNewButton_46.setEnabled(false);
           btnNewButton_47.setEnabled(true);
+          lblSeatNum.setText("F"+cmd);
 
           break;
       case "48":
@@ -2872,6 +2931,7 @@ public class SeatFrame extends JFrame implements ActionListener {
           btnNewButton_45.setEnabled(true);
           btnNewButton_46.setEnabled(true);
           btnNewButton_47.setEnabled(false);
+          lblSeatNum.setText("F"+cmd);
       default:
           break;
 
@@ -2880,19 +2940,31 @@ public class SeatFrame extends JFrame implements ActionListener {
       
       if (cmd.equals("예매하기")) {
          // 메인 화면 띄우기 
+    	  if (lblSeatNum.getText().equals("")) {
+    		  JOptionPane.showMessageDialog(null, "좌석을 선택해 주세요");
+		} else {
     	  UserDTO dto = new UserDTO();
 			dto.setMvname(this.mvName);
 			dto.setLoc(this.mvLoc);
 			dto.setMvtime(this.mvTime);
+			dto.setMvcode(this.mvCode);
+			dto.setSitnum(lblSeatNum.getText());
 			if(dao.insertMv(dto)) {
-				JOptionPane.showMessageDialog(null, "예매완료");
+				
+				String List = "예매내역\n";
+				List += "영화제목 : " + mvName + "\n";
+				List += "장소 : " + mvLoc + "\n";
+				List += "시간 : " + mvTime + "\n";
+				List += "좌석번호 : " + lblSeatNum.getText() + "\n";
+				
+				JOptionPane.showMessageDialog(null, List, "예매완료", JOptionPane.INFORMATION_MESSAGE);
 				new MainFrame().setVisible(true);
 		         setVisible(false); // 현재화면 안보이게
 				
 			}else {
 				JOptionPane.showMessageDialog(null, "실패: 올바르게 작성해주세요");
 			}
-
+		}
       } else if (cmd.equals("이전으로")) {
          // 시간선택 화면 띄우기
          new MainFrame().setVisible(true);
