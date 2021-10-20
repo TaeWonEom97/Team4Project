@@ -119,11 +119,8 @@ public class SeatFrame extends JFrame implements ActionListener {
    public SeatFrame() {
    	setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Movie\\영화 아이콘.png"));
 
-<<<<<<< HEAD
       setTitle("JAVA CINEMA-좌석 선택하기");
-=======
       setTitle("JAVA CINEMA 좌석 선택");
->>>>>>> branch 'master' of https://github.com/TaeWonEom97/Team4Project.git
       setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
       setBounds(656, 200, 829, 724);
       contentPane = new JPanel();
