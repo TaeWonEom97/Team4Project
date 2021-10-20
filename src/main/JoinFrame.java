@@ -143,6 +143,23 @@ public class JoinFrame extends JFrame implements ActionListener {
       dbcheck = new JButton("\uC911\uBCF5\uD655\uC778");
       dbcheck.setFont(new Font("굴림", Font.PLAIN, 10));
       dbcheck.setBounds(333, 110, 71, 28);
+      dbcheck.addActionListener(new ActionListener() {
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			String cmd=e.getActionCommand();
+			if(cmd.equals("중복확인")) {
+				String userid = tfUsername.getText();
+				 if(dao.getRow2(userid)==true) {
+		              JOptionPane.showMessageDialog(null, "중복입니다.다시 입력해주세요");
+		           }else {
+		              JOptionPane.showMessageDialog(null, "사용가능합니다.");
+		           }
+		           System.out.println();     
+			}
+		}
+    	  
+      });
       tfjoin.add(dbcheck);
       
       
