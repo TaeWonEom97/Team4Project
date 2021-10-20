@@ -16,7 +16,10 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
+
 import java.awt.Toolkit;
+
+import javax.swing.JTextField;
 
 
 public class MainFrame extends JFrame implements ActionListener{
@@ -39,8 +42,18 @@ public class MainFrame extends JFrame implements ActionListener{
     Image updateImg4 = img4.getScaledInstance(150, 250, Image.SCALE_SMOOTH);
     ImageIcon updateIcon4 = new ImageIcon(updateImg4);
     private String userid;
-	
-    public void setUserid(String userid) {
+	private JTextField textField;
+	private JButton btnLogin;
+	private JButton btnjoin;
+    public JButton getBtnjoin() {
+		return btnjoin;
+	}
+
+	public void setBtnjoin(JButton btnjoin) {
+		this.btnjoin = btnjoin;
+	}
+
+	public void setUserid(String userid) {
 		this.userid = userid;
 	}
     
@@ -126,17 +139,21 @@ public class MainFrame extends JFrame implements ActionListener{
 		JPanel panel_2 = new JPanel();
 		contentPane.add(panel_2, BorderLayout.SOUTH);
 		
-		JButton btnLogin = new JButton("로그인");
-		btnLogin.addActionListener(this);
-		panel_2.add(btnLogin);
+		setBtnLogin(new JButton("로그인"));
+		getBtnLogin().addActionListener(this);
+		panel_2.add(getBtnLogin());
 		
-		JButton btnjoin = new JButton("회원가입");
+		btnjoin = new JButton("회원가입");
 		btnjoin.addActionListener(this);
 		panel_2.add(btnjoin);
 		
 		JButton btnLogout = new JButton("로그아웃");
 		btnLogout.addActionListener(this);
 		panel_2.add(btnLogout);
+		
+		
+
+		
 	}
 
 	public void actionPerformed(ActionEvent e) {
@@ -158,7 +175,6 @@ public class MainFrame extends JFrame implements ActionListener{
 			
 		} else if (cmd.equals("로그인")) {
 			// 로그인상태 아닐때만 작동하게
-			
 			new LoginFrame().setVisible(true); // 로그인화면 띄우기
 			setVisible(false); // 현재화면 안보이게
 			
@@ -175,6 +191,14 @@ public class MainFrame extends JFrame implements ActionListener{
 			setVisible(false); // 현재화면 안보이게
 		}
 		
+	}
+
+	public JButton getBtnLogin() {
+		return btnLogin;
+	}
+
+	public void setBtnLogin(JButton btnLogin) {
+		this.btnLogin = btnLogin;
 	}
 
 }

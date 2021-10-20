@@ -27,7 +27,22 @@ public class LoginFrame extends JFrame {
    private JTextField textField;
    private JTextField textField_1;
    private JTextField textField_2;
-   UserDAO dao = new UserDAO();
+   private JButton btnLogin;
+   private JButton btnjoin;
+   public JButton getBtnLogin() {
+	return btnLogin;
+}
+   public JButton getBtnjoin() {
+		return btnjoin;
+	}
+public void setBtnLogin(JButton btnLogin) {
+	this.btnLogin = btnLogin;
+}
+public void setBtnjoin(JButton btnjoin) {
+	this.btnjoin = btnjoin;
+}
+
+UserDAO dao = new UserDAO();
 
    /**
     * Launch the application.
@@ -112,8 +127,10 @@ public class LoginFrame extends JFrame {
             String userpwd = textField_2.getText();
 //            UserDTO dto = new UserDTO(userid,userpwd);
             if(dao.getRow(userid, userpwd)!=null) {
-              JOptionPane.showMessageDialog(null, "로그인성공");
+              JOptionPane.showMessageDialog(null, "로그인성공\n"+userid+"님 환영합니다.");
               MainFrame f=new MainFrame();
+              f.getBtnLogin().setVisible(false);
+              f.getBtnjoin().setVisible(false);
               f.setUserid(userid);
               f.setVisible(true);
               setVisible(false);

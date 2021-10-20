@@ -18,6 +18,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.BoxLayout;
+import java.awt.Color;
 
 
 public class MvFindFrame extends JFrame{
@@ -63,6 +64,7 @@ public class MvFindFrame extends JFrame{
 		panel.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
 		
 		textField = new JTextField();
+		textField.setBackground(Color.WHITE);
 		panel.add(textField);
 		textField.setColumns(10);
 		
