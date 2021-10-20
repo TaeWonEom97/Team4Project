@@ -18,6 +18,7 @@ import javax.swing.JButton;
 import java.awt.Color;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.Toolkit;
 
 public class SeatFrame extends JFrame implements ActionListener {
 
@@ -116,8 +117,9 @@ public class SeatFrame extends JFrame implements ActionListener {
     */
 
    public SeatFrame() {
+   	setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Movie\\영화 아이콘.png"));
 
-      setTitle("JAVA CINEMA");
+      setTitle("JAVA CINEMA-좌석 선택하기");
       setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
       setBounds(656, 200, 829, 724);
       contentPane = new JPanel();

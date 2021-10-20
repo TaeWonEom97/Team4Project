@@ -19,6 +19,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JButton;
+import java.awt.Toolkit;
 
 public class LoginFrame extends JFrame {
 
@@ -48,7 +49,8 @@ public class LoginFrame extends JFrame {
     * Create the frame.
     */
    public LoginFrame() {
-      setTitle("JAVA CINEMA");
+   	setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Movie\\영화 아이콘.png"));
+      setTitle("JAVA CINEMA-로그인");
       setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
       setBounds(100, 100, 450, 350);
       contentPane = new JPanel();

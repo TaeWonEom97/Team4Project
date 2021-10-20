@@ -18,6 +18,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
+import java.awt.Toolkit;
 
 
 public class FindFrame extends JFrame implements ActionListener {
@@ -46,6 +47,8 @@ public class FindFrame extends JFrame implements ActionListener {
     * Create the frame.
     */
    public FindFrame(String userid) {
+   	setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Movie\\영화 아이콘.png"));
+   	setTitle("JAVA CINEMA-예매 확인");
 	   
 	   this.userid=userid;
 	   

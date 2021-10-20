@@ -16,6 +16,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
+import java.awt.Toolkit;
 
 
 public class MainFrame extends JFrame implements ActionListener{
@@ -60,6 +61,8 @@ public class MainFrame extends JFrame implements ActionListener{
 	 * Create the frame.
 	 */
 	public MainFrame() {
+		setTitle("JAVA CINEMA");
+		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Movie\\영화 아이콘.png"));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 800, 600);
 		contentPane = new JPanel();
