@@ -113,9 +113,12 @@ public class MvInfo extends JFrame implements ActionListener , ListSelectionList
 		
 		
 	    if  (cmd.equals("처음으로")) {
-        new MainFrame().setVisible(true); // 메인화면 띄우기
-        setVisible(false); // 현재화면 안보이게
-        
+	    	 MainFrame f=new MainFrame();
+             f.getBtnLogin().setVisible(false);
+             f.getBtnjoin().setVisible(false);
+         
+             f.setVisible(true);
+             setVisible(false);
 	    }
 	}   
 

@@ -114,14 +114,21 @@ public class FindFrame extends JFrame implements ActionListener {
       String cmd = e.getActionCommand();
       
       if (cmd.equals("확인")) {
-         new MainFrame().setVisible(true); // 메인화면 보이게
-         setVisible(false); // 현재화면 안보이게
+    	  MainFrame f=new MainFrame();
+          f.getBtnLogin().setVisible(false);
+          f.getBtnjoin().setVisible(false);
+          f.setVisible(true);
          
       } else if (cmd.equals("예매취소")) {
          // 가진정보 지우고 로그인화면 띄우기
     	  if(dao.deleteMv(userid)==true) {
     		  JOptionPane.showMessageDialog(null, "예매취소성공");
-    		  new MainFrame().setVisible(true); // 로그인화면 띄우기
+    		  MainFrame f=new MainFrame();
+              f.getBtnLogin().setVisible(false);
+              f.getBtnjoin().setVisible(false);
+          
+              f.setVisible(true);
+           
     	         setVisible(false); // 현재화면 안보이게
     	  }else {
               JOptionPane.showMessageDialog(null, "예매취소실패");

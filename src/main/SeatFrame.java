@@ -2963,8 +2963,11 @@ public class SeatFrame extends JFrame implements ActionListener {
 				List += "좌석번호 : " + lblSeatNum.getText() + "\n";
 				
 				JOptionPane.showMessageDialog(null, List, "예매완료", JOptionPane.INFORMATION_MESSAGE);
-				new MainFrame().setVisible(true);
-		         setVisible(false); // 현재화면 안보이게
+				  MainFrame f=new MainFrame();
+	              f.getBtnLogin().setVisible(false);
+	              f.getBtnjoin().setVisible(false);
+	              f.setVisible(true);
+	              setVisible(false);
             
          }else {
             JOptionPane.showMessageDialog(null, "실패: 올바르게 작성해주세요");
