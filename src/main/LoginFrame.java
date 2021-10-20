@@ -1,24 +1,21 @@
 package main;
 
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
-
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
-
-import dao.UserDAO;
-import dto.UserDTO;
-
-import javax.swing.JTextField;
-import javax.swing.SwingConstants;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.JButton;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
-import javax.swing.JButton;
+import javax.swing.JPanel;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
+import javax.swing.SwingConstants;
+import javax.swing.border.EmptyBorder;
+
+import dao.UserDAO;
 
 public class LoginFrame extends JFrame {
 
@@ -48,7 +45,7 @@ public class LoginFrame extends JFrame {
     * Create the frame.
     */
    public LoginFrame() {
-      setTitle("JAVA CINEMA");
+      setTitle("JAVA CINEMA 로그인");
       setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
       setBounds(100, 100, 450, 350);
       contentPane = new JPanel();
@@ -81,7 +78,7 @@ public class LoginFrame extends JFrame {
       contentPane.add(textField_1);
       textField_1.setColumns(10);
       
-      textField_2 = new JTextField();
+      textField_2 = new JPasswordField();
       textField_2.setColumns(10);
       textField_2.setBounds(217, 167, 124, 37);
       contentPane.add(textField_2);

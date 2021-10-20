@@ -117,7 +117,7 @@ public class SeatFrame extends JFrame implements ActionListener {
 
    public SeatFrame() {
 
-      setTitle("JAVA CINEMA");
+      setTitle("JAVA CINEMA 좌석 선택");
       setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
       setBounds(656, 200, 829, 724);
       contentPane = new JPanel();
