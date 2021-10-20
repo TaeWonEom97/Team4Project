@@ -204,6 +204,7 @@ public class UserDAO {
 		return deleteFlag;
 		
 	}
+
 	// 중복 체크
 	public boolean getRow2(String userid) {
 	      boolean flag = false;
@@ -235,18 +236,4 @@ public class UserDAO {
 	   }
 	
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

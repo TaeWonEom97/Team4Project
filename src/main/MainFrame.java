@@ -2,25 +2,20 @@ package main;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
-
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
-
-import main.LoginFrame;
-
+import java.awt.FlowLayout;
+import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import javax.swing.JButton;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
 import javax.swing.SwingConstants;
-import java.awt.FlowLayout;
-import java.awt.Font;
+import javax.swing.border.EmptyBorder;
 
 
 public class MainFrame extends JFrame implements ActionListener{
@@ -144,9 +139,8 @@ public class MainFrame extends JFrame implements ActionListener{
 	public void actionPerformed(ActionEvent e) {
 		String cmd = e.getActionCommand();
 		
-		if (cmd.equals("영화정보")) {
-			// 영화정보화면 띄우기
-			
+	      if (cmd.equals("영화 정보")) {
+			new MvInfo().setVisible(true);
 			setVisible(false); // 현재화면 안보이게
 			
 		} else if (cmd.equals("영화 예매")) {

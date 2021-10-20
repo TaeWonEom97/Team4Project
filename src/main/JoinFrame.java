@@ -51,6 +51,7 @@ public class JoinFrame extends JFrame implements ActionListener {
 		});
 	}
 
+
 	/**
 	 * Create the frame.
 	 */
@@ -164,10 +165,7 @@ public class JoinFrame extends JFrame implements ActionListener {
 		tfjoin.add(dbcheck);
 
 		setVisible(true);
-// 회원가입 액션
-		// 로그인 액션// 팝업 제작
-		// 창 전환
-	}
+}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
