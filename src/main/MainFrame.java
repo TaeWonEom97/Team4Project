@@ -2,25 +2,20 @@ package main;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
-
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
-
-import main.LoginFrame;
-
+import java.awt.FlowLayout;
+import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import javax.swing.JButton;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
 import javax.swing.SwingConstants;
-import java.awt.FlowLayout;
-import java.awt.Font;
+import javax.swing.border.EmptyBorder;
 
 
 public class MainFrame extends JFrame implements ActionListener{
@@ -46,6 +41,7 @@ public class MainFrame extends JFrame implements ActionListener{
 	
     public void setUserid(String userid) {
 		this.userid = userid;
+		
 	}
     
 	public static void main(String[] args) {
@@ -65,6 +61,9 @@ public class MainFrame extends JFrame implements ActionListener{
 	 * Create the frame.
 	 */
 	public MainFrame() {
+		
+		
+		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 800, 600);
 		contentPane = new JPanel();
@@ -139,14 +138,16 @@ public class MainFrame extends JFrame implements ActionListener{
 		JButton btnLogout = new JButton("로그아웃");
 		btnLogout.addActionListener(this);
 		panel_2.add(btnLogout);
+		
+		
+	
 	}
 
 	public void actionPerformed(ActionEvent e) {
 		String cmd = e.getActionCommand();
 		
-		if (cmd.equals("영화정보")) {
-			// 영화정보화면 띄우기
-			
+	      if (cmd.equals("영화 정보")) {
+			new MvInfo().setVisible(true);
 			setVisible(false); // 현재화면 안보이게
 			
 		} else if (cmd.equals("영화 예매")) {

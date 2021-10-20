@@ -204,8 +204,6 @@ public class UserDAO {
 		
 	}
 
-	
-
 
 	// 중복 체크
 	public boolean getRow2(String userid) {

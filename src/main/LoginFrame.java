@@ -27,6 +27,7 @@ public class LoginFrame extends JFrame {
    private JTextField textField_1;
    private JTextField textField_2;
    UserDAO dao = new UserDAO();
+   private MainFrame mainFrame;
 
    /**
     * Launch the application.
