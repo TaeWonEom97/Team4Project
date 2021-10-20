@@ -19,6 +19,7 @@ import java.awt.event.ActionListener;
 
 import javax.swing.BoxLayout;
 import java.awt.Color;
+import java.awt.Toolkit;
 
 
 public class MvFindFrame extends JFrame{
@@ -46,6 +47,7 @@ public class MvFindFrame extends JFrame{
 	 * Create the frame.
 	 */
 	public MvFindFrame() {
+		setIconImage(Toolkit.getDefaultToolkit().getImage(MvFindFrame.class.getResource("/main/movie.png")));
 		setTitle("JAVA CINEMA 예매 내역 조회");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);

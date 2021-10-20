@@ -9,6 +9,9 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+
+import javax.swing.JButton;
+import java.awt.Toolkit;
 import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
@@ -61,6 +64,8 @@ UserDAO dao = new UserDAO();
     * Create the frame.
     */
    public LoginFrame() {
+   	setIconImage(Toolkit.getDefaultToolkit().getImage(LoginFrame.class.getResource("/main/movie.png")));
+      setTitle("JAVA CINEMA-로그인");
       setTitle("JAVA CINEMA 로그인");
       setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
       setBounds(100, 100, 450, 350);

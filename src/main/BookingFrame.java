@@ -34,6 +34,7 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
 import javax.swing.UIManager;
+import java.awt.Toolkit;
 
 public class BookingFrame extends JFrame implements ActionListener, ListSelectionListener {
 
@@ -94,6 +95,8 @@ public class BookingFrame extends JFrame implements ActionListener, ListSelectio
     * Create the frame.
     */
    public BookingFrame() {
+   	setTitle("JAVA CINEMA-영화 예매");
+   	setIconImage(Toolkit.getDefaultToolkit().getImage(BookingFrame.class.getResource("/main/movie.png")));
 	  setTitle("JAVA CINEMA 예매하기");
       setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
       setBounds(100, 100, 800, 600);

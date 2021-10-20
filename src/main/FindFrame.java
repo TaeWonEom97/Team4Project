@@ -18,6 +18,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
+import java.awt.Toolkit;
 
 
 public class FindFrame extends JFrame implements ActionListener {
@@ -46,6 +47,8 @@ public class FindFrame extends JFrame implements ActionListener {
     * Create the frame.
     */
    public FindFrame(String userid) {
+   	setIconImage(Toolkit.getDefaultToolkit().getImage(FindFrame.class.getResource("/main/movie.png")));
+   	setTitle("JAVA CINEMA-예매 확인");
 	   
 	   this.userid=userid;
 	   
@@ -118,6 +121,7 @@ public class FindFrame extends JFrame implements ActionListener {
           f.getBtnLogin().setVisible(false);
           f.getBtnjoin().setVisible(false);
           f.setVisible(true);
+          setVisible(false);
          
       } else if (cmd.equals("예매취소")) {
          // 가진정보 지우고 로그인화면 띄우기
