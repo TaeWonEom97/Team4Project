@@ -201,5 +201,4 @@ public class UserDAO {
 		}
 		return deleteFlag;
 	}
-
 }
