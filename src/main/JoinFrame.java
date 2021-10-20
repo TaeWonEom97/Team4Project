@@ -132,10 +132,10 @@ public class JoinFrame extends JFrame implements ActionListener {
       
       tfcancel = new JButton("\uCDE8\uC18C");
       tfcancel.addActionListener(new ActionListener() {
-      	public void actionPerformed(ActionEvent e) {
-      		new MainFrame().setVisible(true); // 조회화면 띄우기
-			setVisible(false);
-      	}
+         public void actionPerformed(ActionEvent e) {
+            new MainFrame().setVisible(true); // 조회화면 띄우기
+         setVisible(false);
+         }
       });
       tfcancel.setBounds(222, 333, 141, 35);
       tfjoin.add(tfcancel);
@@ -145,20 +145,20 @@ public class JoinFrame extends JFrame implements ActionListener {
       dbcheck.setBounds(333, 110, 71, 28);
       dbcheck.addActionListener(new ActionListener() {
 
-		@Override
-		public void actionPerformed(ActionEvent e) {
-			String cmd=e.getActionCommand();
-			if(cmd.equals("중복확인")) {
-				String userid = tfUsername.getText();
-				 if(dao.getRow2(userid)==true) {
-		              JOptionPane.showMessageDialog(null, "중복입니다.다시 입력해주세요");
-		           }else {
-		              JOptionPane.showMessageDialog(null, "사용가능합니다.");
-		           }
-		           System.out.println();     
-			}
-		}
-    	  
+      @Override
+      public void actionPerformed(ActionEvent e) {
+         String cmd=e.getActionCommand();
+         if(cmd.equals("중복확인")) {
+            String userid = tfUsername.getText();
+             if(dao.getRow2(userid)==true) {
+                    JOptionPane.showMessageDialog(null, "중복입니다.다시 입력해주세요");
+                 }else {
+                    JOptionPane.showMessageDialog(null, "사용가능합니다.");
+                 }
+                 System.out.println();     
+         }
+      }
+         
       });
       tfjoin.add(dbcheck);
       
