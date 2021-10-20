@@ -150,12 +150,17 @@ public class JoinFrame extends JFrame implements ActionListener {
          String cmd=e.getActionCommand();
          if(cmd.equals("중복확인")) {
             String userid = tfUsername.getText();
+            
+            if(userid.equals("")) {
+            	JOptionPane.showMessageDialog(null, "id를 입력해주세요");
+            } else {
              if(dao.getRow2(userid)==true) {
                     JOptionPane.showMessageDialog(null, "중복입니다.다시 입력해주세요");
                  }else {
                     JOptionPane.showMessageDialog(null, "사용가능합니다.");
                  }
-                 System.out.println();     
+                 System.out.println();
+            }
          }
       }
          
