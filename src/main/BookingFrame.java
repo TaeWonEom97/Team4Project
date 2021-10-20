@@ -115,7 +115,7 @@ public class BookingFrame extends JFrame implements ActionListener, ListSelectio
       movie.setFont(new Font("굴림", Font.PLAIN, 22));
       movie.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
       movie.setModel(new AbstractListModel() {
-         String[] values = new String[] { "007 노 타임 투 다이", "보이스", "기적", "극장판 짱구는 못말려" };
+         String[] values = new String[] { "007 노 타임 투 다이", "기적", "보이스", "극장판 짱구는 못말려" };
 
          public int getSize() {
             return values.length;
@@ -269,12 +269,12 @@ public class BookingFrame extends JFrame implements ActionListener, ListSelectio
          lblNewLabel.setIcon(updateIcon1);
          lblmovie.setText((select.getSelectedValue()));
          lblmvcode.setText("M1");
-      } else if (select.getSelectedValue().equals("보이스")) {
-         lblNewLabel.setIcon(updateIcon2);
-         lblmovie.setText((select.getSelectedValue()));
-         lblmvcode.setText("M2");
       } else if (select.getSelectedValue().equals("기적")) {
          lblNewLabel.setIcon(updateIcon3);
+         lblmovie.setText((select.getSelectedValue()));
+         lblmvcode.setText("M2");
+      } else if (select.getSelectedValue().equals("보이스")) {
+         lblNewLabel.setIcon(updateIcon2);
          lblmovie.setText((select.getSelectedValue()));
          lblmvcode.setText("M3");
       } else if (select.getSelectedValue().equals("극장판 짱구는 못말려")) {

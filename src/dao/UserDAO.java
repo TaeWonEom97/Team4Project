@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 
 import dto.UserDTO;
 
@@ -200,6 +201,51 @@ public class UserDAO {
 			}
 		}
 		return deleteFlag;
+		
 	}
+	// 중복 체크
+	public boolean getRow2(String userid) {
+	      boolean flag = false;
 
+	      Connection con = null;
+	      PreparedStatement pstmt = null;
+	      try {
+	         con = getConnection();
+	         String sql = "select * from customer_log where userid = ?";
+	         pstmt = con.prepareStatement(sql);
+	         pstmt.setString(1, userid);
+	         int result = pstmt.executeUpdate();
+	         if (result > 0) {
+	            flag = true;
+	         }
+	      } catch (Exception e) {
+	         e.printStackTrace();
+	      } finally {
+	         try {
+	            pstmt.close();
+	            con.close();
+	         } catch (Exception e2) {
+	            e2.printStackTrace();
+	         }
+	      }
+
+	      return flag;
+
+	   }
+	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
