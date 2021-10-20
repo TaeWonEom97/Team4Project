@@ -271,6 +271,13 @@ public class BookingFrame extends JFrame implements ActionListener, ListSelectio
          lblmvcode.setText("M1");
       } else if (select.getSelectedValue().equals("기적")) {
          lblNewLabel.setIcon(updateIcon2);
+<<<<<<< HEAD
+=======
+         lblmovie.setText((select.getSelectedValue()));
+         lblmvcode.setText("M2");
+      } else if (select.getSelectedValue().equals("보이스")) {
+         lblNewLabel.setIcon(updateIcon3);
+>>>>>>> branch 'master' of https://github.com/TaeWonEom97/Team4Project.git
          lblmovie.setText((select.getSelectedValue()));
          lblmvcode.setText("M2");
       } else if (select.getSelectedValue().equals("보이스")) {

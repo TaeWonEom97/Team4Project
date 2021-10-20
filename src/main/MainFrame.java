@@ -71,12 +71,6 @@ public class MainFrame extends JFrame implements ActionListener{
 	 * Create the frame.
 	 */
 	public MainFrame() {
-		if (userid != null) {
-			lbluser.setText(userid);
-			lblwelcome.setText("님 환영합니다.");
-			btnLogin.setEnabled(false);
-			btnjoin.setEnabled(false);
-		}
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 800, 600);
