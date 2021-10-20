@@ -49,16 +49,19 @@ public class MainFrame extends JFrame implements ActionListener{
 	}
     
 	public static void main(String[] args) {
+		
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
 					MainFrame frame = new MainFrame();
 					frame.setVisible(true);
+					
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
 			}
 		});
+		
 	}
 
 	/**
@@ -139,9 +142,11 @@ public class MainFrame extends JFrame implements ActionListener{
 		JButton btnLogout = new JButton("로그아웃");
 		btnLogout.addActionListener(this);
 		panel_2.add(btnLogout);
+		
 	}
 
-	public void actionPerformed(ActionEvent e) {
+	public void actionPerformed(ActionEvent e) {	
+		
 		String cmd = e.getActionCommand();
 		
 		if (cmd.equals("영화정보")) {
@@ -177,6 +182,8 @@ public class MainFrame extends JFrame implements ActionListener{
 			new LoginFrame().setVisible(true); // 로그인화면 띄우기
 			setVisible(false); // 현재화면 안보이게
 		}
+
+		
 		
 	}
 
