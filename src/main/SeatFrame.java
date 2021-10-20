@@ -117,7 +117,7 @@ public class SeatFrame extends JFrame implements ActionListener {
     */
 
    public SeatFrame() {
-   	setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Movie\\영화 아이콘.png"));
+   	setIconImage(Toolkit.getDefaultToolkit().getImage(SeatFrame.class.getResource("/main/movie.png")));
 
       setTitle("JAVA CINEMA-좌석 선택하기");
       setTitle("JAVA CINEMA 좌석 선택");

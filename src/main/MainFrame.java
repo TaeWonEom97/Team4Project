@@ -78,10 +78,6 @@ public class MainFrame extends JFrame implements ActionListener{
 		setTitle("JAVA CINEMA");
 		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Movie\\영화 아이콘.png"));
 
-	
-
-		
-		setTitle("JAVA CINEMA");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 800, 600);
 		contentPane = new JPanel();
