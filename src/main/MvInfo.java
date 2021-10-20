@@ -22,7 +22,6 @@ import javax.swing.JButton;
 import java.awt.BorderLayout;
 
 public class MvInfo extends JFrame implements ActionListener , ListSelectionListener {
-
 	private static final int String = 0;
 	private JPanel contentPane;
 	JList list;
