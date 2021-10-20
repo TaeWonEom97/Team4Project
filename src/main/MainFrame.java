@@ -20,7 +20,7 @@ import javax.swing.JTextField;
 
 
 public class MainFrame extends JFrame implements ActionListener{
-
+	
 	private JPanel contentPane;
 	private ImageIcon icon1 = new ImageIcon(MainFrame.class.getResource("/main/007.jpg"));
 	Image img1 = icon1.getImage();
@@ -71,10 +71,9 @@ public class MainFrame extends JFrame implements ActionListener{
 	/**
 	 * Create the frame.
 	 */
+
 	public MainFrame() {
-		
-		
-		
+
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 800, 600);
 		contentPane = new JPanel();
