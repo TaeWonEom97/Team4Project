@@ -57,7 +57,7 @@ public class JoinFrame extends JFrame implements ActionListener {
     * Create the frame.
     */
    public JoinFrame() {
-   	setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Movie\\영화 아이콘.png"));
+   	setIconImage(Toolkit.getDefaultToolkit().getImage(JoinFrame.class.getResource("/main/movie.png")));
       setTitle("JAVA CINEMA 회원가입");
       setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
       setSize(459, 490);
