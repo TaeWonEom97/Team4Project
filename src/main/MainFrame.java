@@ -76,7 +76,7 @@ public class MainFrame extends JFrame implements ActionListener{
 
 	public MainFrame() {
 		setTitle("JAVA CINEMA");
-		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Movie\\영화 아이콘.png"));
+		setIconImage(Toolkit.getDefaultToolkit().getImage(MainFrame.class.getResource("/main/movie.png")));
 
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 800, 600);

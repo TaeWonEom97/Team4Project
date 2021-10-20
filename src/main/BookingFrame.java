@@ -96,7 +96,7 @@ public class BookingFrame extends JFrame implements ActionListener, ListSelectio
     */
    public BookingFrame() {
    	setTitle("JAVA CINEMA-영화 예매");
-   	setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Movie\\영화 아이콘.png"));
+   	setIconImage(Toolkit.getDefaultToolkit().getImage(BookingFrame.class.getResource("/main/movie.png")));
 	  setTitle("JAVA CINEMA 예매하기");
       setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
       setBounds(100, 100, 800, 600);

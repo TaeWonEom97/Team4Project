@@ -68,7 +68,7 @@ public class MvInfo extends JFrame implements ActionListener , ListSelectionList
 	 * Create the frame.
 	 */
 	public MvInfo() {
-		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Movie\\영화 아이콘.png"));
+		setIconImage(Toolkit.getDefaultToolkit().getImage(MvInfo.class.getResource("/main/movie.png")));
 		setTitle("JAVA CINEMA-영화 조회");
 		setTitle("JAVA CINEMA 영화 정보 조회");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
