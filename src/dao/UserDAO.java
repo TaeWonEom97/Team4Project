@@ -136,7 +136,7 @@ public class UserDAO {
 		}
 		return dto1;
 	}
-
+	//영화 예매
 	public boolean insertMv(UserDTO dto) {
 		boolean flag = false;
 
@@ -172,7 +172,7 @@ public class UserDAO {
 		return flag;
 
 	}
-
+	//예매 취소
 	public boolean deleteMv(String userid) {
 
 		Connection con = null;
@@ -201,5 +201,34 @@ public class UserDAO {
 		}
 		return deleteFlag;
 	}
+	
+	// 아이디 중복체크
+	public boolean getRow2(String userid) {
+		boolean flag = false;
 
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		try {
+			con = getConnection();
+			String sql = "select * from customer_log where userid = ?";
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, userid);
+			int result = pstmt.executeUpdate();
+			if (result > 0) {
+				flag = true;
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				pstmt.close();
+				con.close();
+			} catch (Exception e2) {
+				e2.printStackTrace();
+			}
+		}
+		return flag;
+
+
+	}
 }

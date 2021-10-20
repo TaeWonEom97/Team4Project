@@ -57,7 +57,7 @@ public class JoinFrame extends JFrame implements ActionListener {
    public JoinFrame() {
       setTitle("JAVA CINEMA");
       setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-      setSize(430, 490);
+      setSize(458, 490);
       setLocationRelativeTo(null);
       tfjoin = new JPanel();
       tfjoin.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -67,7 +67,7 @@ public class JoinFrame extends JFrame implements ActionListener {
       lblJoin = new JLabel("회원가입");
       lblJoin.setHorizontalAlignment(SwingConstants.CENTER);
       lblJoin.setFont(new Font("돋움", Font.BOLD, 25)); 
-      lblJoin.setBounds(138, 26, 150, 35);
+      lblJoin.setBounds(142, 26, 150, 35);
       tfjoin.add(lblJoin);
       
       JLabel lblUsername = new JLabel("password");
@@ -127,7 +127,7 @@ public class JoinFrame extends JFrame implements ActionListener {
       //JOptionPane.showMessageDialog(null, "가입성공");
       //JOptionPane.showMessageDialog(null, "실패: 올바르게 작성해주세요");
       });
-      tfjoin2.setBounds(69, 333, 141, 35);
+      tfjoin2.setBounds(73, 333, 141, 35);
       tfjoin.add(tfjoin2);
       
       tfcancel = new JButton("\uCDE8\uC18C");
@@ -137,12 +137,32 @@ public class JoinFrame extends JFrame implements ActionListener {
 			setVisible(false);
       	}
       });
-      tfcancel.setBounds(222, 333, 141, 35);
+      tfcancel.setBounds(226, 333, 141, 35);
       tfjoin.add(tfcancel);
       
       dbcheck = new JButton("\uC911\uBCF5\uD655\uC778");
       dbcheck.setFont(new Font("굴림", Font.PLAIN, 10));
-      dbcheck.setBounds(333, 110, 71, 28);
+      dbcheck.setBounds(340, 111, 90, 28);
+      dbcheck.addActionListener(new ActionListener() {
+    	  
+    	  
+    	  //중복확인
+      	public void actionPerformed(ActionEvent e) {
+      		String cmd = e.getActionCommand();
+      			if (cmd.equals("중복확인")) {
+      				String userid = tfUsername.getText();
+      				if(dao.getRow2(userid)==true) {
+                        JOptionPane.showMessageDialog(null, "사용 가능한 아이디입니다.");
+                     }else {
+                        JOptionPane.showMessageDialog(null, "중복된 아이디입니다.");
+                     }
+      				System.out.println();
+				}
+      		
+      		
+      	}
+      });
+    
       tfjoin.add(dbcheck);
       
       
@@ -153,7 +173,7 @@ public class JoinFrame extends JFrame implements ActionListener {
       // 창 전환 
    }
 
-@Override
+
 public void actionPerformed(ActionEvent e) {
    
 }

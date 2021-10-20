@@ -50,7 +50,7 @@ public class LoginFrame extends JFrame {
    public LoginFrame() {
       setTitle("JAVA CINEMA");
       setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-      setBounds(100, 100, 450, 300);
+      setBounds(100, 100, 450, 350);
       contentPane = new JPanel();
       contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
       setContentPane(contentPane);
@@ -91,7 +91,7 @@ public class LoginFrame extends JFrame {
       contentPane.add(btnNewButton);
       btnNewButton.addActionListener(new ActionListener() {
 		
-		@Override
+		
 		public void actionPerformed(ActionEvent e) {
 			new MainFrame().setVisible(true); // 조회화면 띄우기
 			setVisible(false);
@@ -104,7 +104,7 @@ public class LoginFrame extends JFrame {
       contentPane.add(btnNewButton_1);
       btnNewButton_1.addActionListener(new ActionListener() {
       
-      @Override
+      
       public void actionPerformed(ActionEvent e) {
             String userid = textField_1.getText();
             String userpwd = textField_2.getText();

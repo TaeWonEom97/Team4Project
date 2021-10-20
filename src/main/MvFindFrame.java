@@ -73,7 +73,7 @@ public class MvFindFrame extends JFrame{
 		panel_1.add(btnNewButton);
 		btnNewButton.addActionListener(new ActionListener() {
 			
-			@Override
+			
 			public void actionPerformed(ActionEvent e) {
 				String cmd = e.getActionCommand();
 				if(cmd.equals("확인")) {
@@ -88,7 +88,7 @@ public class MvFindFrame extends JFrame{
 		panel_1.add(btnNewButton_1);
 		btnNewButton_1.addActionListener(new ActionListener() {
 			
-			@Override
+			
 			public void actionPerformed(ActionEvent e) {
 				String cmd = e.getActionCommand();
 				if(cmd.equals("취소")) {
