@@ -137,7 +137,7 @@ public class UserDAO {
 		}
 		return dto1;
 	}
-	//영화 예매
+
 	public boolean insertMv(UserDTO dto) {
 		boolean flag = false;
 
