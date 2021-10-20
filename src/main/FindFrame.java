@@ -47,7 +47,7 @@ public class FindFrame extends JFrame implements ActionListener {
     * Create the frame.
     */
    public FindFrame(String userid) {
-   	setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Movie\\영화 아이콘.png"));
+   	setIconImage(Toolkit.getDefaultToolkit().getImage(FindFrame.class.getResource("/main/movie.png")));
    	setTitle("JAVA CINEMA-예매 확인");
 	   
 	   this.userid=userid;

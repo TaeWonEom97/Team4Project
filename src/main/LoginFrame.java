@@ -63,7 +63,7 @@ UserDAO dao = new UserDAO();
     * Create the frame.
     */
    public LoginFrame() {
-   	setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Movie\\영화 아이콘.png"));
+   	setIconImage(Toolkit.getDefaultToolkit().getImage(LoginFrame.class.getResource("/main/movie.png")));
       setTitle("JAVA CINEMA-로그인");
       setTitle("JAVA CINEMA 로그인");
       setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
