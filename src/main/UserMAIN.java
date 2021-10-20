@@ -22,7 +22,7 @@ public class UserMAIN {
          System.out.println("2. 로그인 ");
          System.out.println("3. ");
          System.out.println("4. ");
-         System.out.println("5. ");
+         System.out.println("5. 중복 체크");
          System.out.println("6.종료");
          System.out.println("***************");
          
@@ -54,13 +54,7 @@ public class UserMAIN {
              System.out.println(dao.getRow(userid1,userpwd1)!=null?"로그인 성공" :"실패"); 
              System.out.println();
              break;
-            
-            
-            
-            
-            
-            
-            
+    
             
             
             

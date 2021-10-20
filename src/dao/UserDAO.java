@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 
 import dto.UserDTO;
 
@@ -200,11 +201,16 @@ public class UserDAO {
 			}
 		}
 		return deleteFlag;
+		
 	}
+
 	
-	// 아이디 중복체크
+
+
+	// 중복 체크
 	public boolean getRow2(String userid) {
-		boolean flag = false;
+	      boolean flag = false;
+
 
 		Connection con = null;
 		PreparedStatement pstmt = null;
@@ -232,3 +238,4 @@ public class UserDAO {
 
 	}
 }
+

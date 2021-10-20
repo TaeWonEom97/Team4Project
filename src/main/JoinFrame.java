@@ -70,15 +70,15 @@ public class JoinFrame extends JFrame implements ActionListener {
       lblJoin.setBounds(142, 26, 150, 35);
       tfjoin.add(lblJoin);
       
-      JLabel lblUsername = new JLabel("password");
+      JLabel lblUsername = new JLabel("비밀번호");
       lblUsername.setBounds(52, 164, 69, 20);
       tfjoin.add(lblUsername);
       
-      JLabel label = new JLabel("username");
+      JLabel label = new JLabel("아이디");
       label.setBounds(52, 114, 69, 20);
       tfjoin.add(label);
       
-      JLabel lblName = new JLabel("name");
+      JLabel lblName = new JLabel("이름");
       lblName.setBounds(52, 211, 69, 20);
       tfjoin.add(lblName);
       
@@ -132,10 +132,10 @@ public class JoinFrame extends JFrame implements ActionListener {
       
       tfcancel = new JButton("\uCDE8\uC18C");
       tfcancel.addActionListener(new ActionListener() {
-      	public void actionPerformed(ActionEvent e) {
-      		new MainFrame().setVisible(true); // 조회화면 띄우기
-			setVisible(false);
-      	}
+         public void actionPerformed(ActionEvent e) {
+            new MainFrame().setVisible(true); // 조회화면 띄우기
+         setVisible(false);
+         }
       });
       tfcancel.setBounds(226, 333, 141, 35);
       tfjoin.add(tfcancel);
@@ -144,25 +144,31 @@ public class JoinFrame extends JFrame implements ActionListener {
       dbcheck.setFont(new Font("굴림", Font.PLAIN, 10));
       dbcheck.setBounds(340, 111, 90, 28);
       dbcheck.addActionListener(new ActionListener() {
-    	  
-    	  
-    	  //중복확인
-      	public void actionPerformed(ActionEvent e) {
-      		String cmd = e.getActionCommand();
-      			if (cmd.equals("중복확인")) {
-      				String userid = tfUsername.getText();
-      				if(dao.getRow2(userid)==true) {
-                        JOptionPane.showMessageDialog(null, "사용 가능한 아이디입니다.");
-                     }else {
-                        JOptionPane.showMessageDialog(null, "중복된 아이디입니다.");
-                     }
-      				System.out.println();
-				}
-      		
-      		
-      	}
+
+      @Override
+      public void actionPerformed(ActionEvent e) {
+         String cmd=e.getActionCommand();
+         if(cmd.equals("중복확인")) {
+            String userid = tfUsername.getText();
+            
+            if(userid.equals("")) {
+            	JOptionPane.showMessageDialog(null, "아이디를 입력하세요");
+            
+         }else {
+            	 if(dao.getRow2(userid)==true) {
+                     JOptionPane.showMessageDialog(null, "중복입니다.다시 입력해주세요");
+                  }else {
+                     JOptionPane.showMessageDialog(null, "사용가능합니다.");
+			}
+            	 System.out.println();     
+            
+           }
+         }
+      }
+      
+         
       });
-    
+
       tfjoin.add(dbcheck);
       
       
