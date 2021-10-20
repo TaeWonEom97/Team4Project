@@ -20,6 +20,7 @@ import javax.swing.event.ListSelectionListener;
 import dao.UserDAO;
 import javax.swing.JButton;
 import java.awt.BorderLayout;
+import java.awt.Toolkit;
 
 public class MvInfo extends JFrame implements ActionListener , ListSelectionListener {
 
@@ -67,6 +68,8 @@ public class MvInfo extends JFrame implements ActionListener , ListSelectionList
 	 * Create the frame.
 	 */
 	public MvInfo() {
+		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Movie\\영화 아이콘.png"));
+		setTitle("JAVA CINEMA-영화 조회");
 		setTitle("JAVA CINEMA 영화 정보 조회");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 800, 600);

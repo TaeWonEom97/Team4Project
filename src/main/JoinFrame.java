@@ -18,6 +18,7 @@ import javax.swing.border.EmptyBorder;
 
 import dao.UserDAO;
 import dto.UserDTO;
+import java.awt.Toolkit;
 
 public class JoinFrame extends JFrame implements ActionListener {
 
@@ -56,6 +57,7 @@ public class JoinFrame extends JFrame implements ActionListener {
     * Create the frame.
     */
    public JoinFrame() {
+   	setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Movie\\영화 아이콘.png"));
       setTitle("JAVA CINEMA 회원가입");
       setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
       setSize(459, 490);

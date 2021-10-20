@@ -16,6 +16,9 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
+
+import java.awt.Toolkit;
+
 import javax.swing.JTextField;
 
 
@@ -72,6 +75,9 @@ public class MainFrame extends JFrame implements ActionListener{
 	 */
 
 	public MainFrame() {
+		setTitle("JAVA CINEMA");
+		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Movie\\영화 아이콘.png"));
+
 	
 
 		
