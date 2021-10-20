@@ -11,13 +11,13 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JPasswordField;
 import javax.swing.JTextField;
+import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 
 import dao.UserDAO;
 import dto.UserDTO;
-
-import javax.swing.SwingConstants;
 
 public class JoinFrame extends JFrame implements ActionListener {
 
@@ -56,7 +56,7 @@ public class JoinFrame extends JFrame implements ActionListener {
     * Create the frame.
     */
    public JoinFrame() {
-      setTitle("JAVA CINEMA");
+      setTitle("JAVA CINEMA 회원가입");
       setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
       setSize(459, 490);
       setLocationRelativeTo(null);
@@ -89,7 +89,7 @@ public class JoinFrame extends JFrame implements ActionListener {
       tfjoin.add(tfUsername);
       // 버튼을 누르면 창 전환되는 것
 
-      tfPassword = new JTextField();
+      tfPassword = new JPasswordField();
       tfPassword.setColumns(10);
       tfPassword.setBounds(142, 157, 186, 35);
       tfjoin.add(tfPassword);
