@@ -67,7 +67,7 @@ public class MvInfo extends JFrame implements ActionListener , ListSelectionList
 	 * Create the frame.
 	 */
 	public MvInfo() {
-		setTitle("영화 정보 조회");
+		setTitle("JAVA CINEMA 영화 정보 조회");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 800, 600);
 		contentPane = new JPanel();

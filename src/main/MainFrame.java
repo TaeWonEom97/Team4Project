@@ -16,13 +16,11 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
-
-import dao.UserDAO;
-import dto.UserDTO;
+import javax.swing.JTextField;
 
 
 public class MainFrame extends JFrame implements ActionListener{
-
+	
 	private JPanel contentPane;
 	private ImageIcon icon1 = new ImageIcon(MainFrame.class.getResource("/main/007.jpg"));
 	Image img1 = icon1.getImage();
@@ -40,26 +38,28 @@ public class MainFrame extends JFrame implements ActionListener{
     Image img4 = icon4.getImage();
     Image updateImg4 = img4.getScaledInstance(150, 250, Image.SCALE_SMOOTH);
     ImageIcon updateIcon4 = new ImageIcon(updateImg4);
-    UserDAO dao = new UserDAO();
     private String userid;
-    JLabel lbluser;
-    JLabel lblwelcome;
-    JButton btnLogin;
-    JButton btnjoin;
-    
-	
-    public void setUserid(String userid) {
+	private JTextField textField;
+	private JButton btnLogin;
+	private JButton btnjoin;
+    public JButton getBtnjoin() {
+		return btnjoin;
+	}
+
+	public void setBtnjoin(JButton btnjoin) {
+		this.btnjoin = btnjoin;
+	}
+
+	public void setUserid(String userid) {
 		this.userid = userid;
 	}
     
 	public static void main(String[] args) {
-		
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
 					MainFrame frame = new MainFrame();
 					frame.setVisible(true);
-					
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -70,8 +70,12 @@ public class MainFrame extends JFrame implements ActionListener{
 	/**
 	 * Create the frame.
 	 */
+
 	public MainFrame() {
+	
+
 		
+		setTitle("JAVA CINEMA");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 800, 600);
 		contentPane = new JPanel();
@@ -135,9 +139,9 @@ public class MainFrame extends JFrame implements ActionListener{
 		JPanel panel_2 = new JPanel();
 		contentPane.add(panel_2, BorderLayout.SOUTH);
 		
-		btnLogin = new JButton("로그인");
-		btnLogin.addActionListener(this);
-		panel_2.add(btnLogin);
+		setBtnLogin(new JButton("로그인"));
+		getBtnLogin().addActionListener(this);
+		panel_2.add(getBtnLogin());
 		
 		btnjoin = new JButton("회원가입");
 		btnjoin.addActionListener(this);
@@ -147,18 +151,12 @@ public class MainFrame extends JFrame implements ActionListener{
 		btnLogout.addActionListener(this);
 		panel_2.add(btnLogout);
 		
-		lbluser = new JLabel("");
-		lbluser.setHorizontalAlignment(SwingConstants.RIGHT);
-		panel_2.add(lbluser);
-		
-		lblwelcome = new JLabel("");
-		panel_2.add(lblwelcome);
 		
 
+		
 	}
 
-	public void actionPerformed(ActionEvent e) {	
-		
+	public void actionPerformed(ActionEvent e) {
 		String cmd = e.getActionCommand();
 		
 	      if (cmd.equals("영화 정보")) {
@@ -177,7 +175,6 @@ public class MainFrame extends JFrame implements ActionListener{
 			
 		} else if (cmd.equals("로그인")) {
 			// 로그인상태 아닐때만 작동하게
-			
 			new LoginFrame().setVisible(true); // 로그인화면 띄우기
 			setVisible(false); // 현재화면 안보이게
 			
@@ -193,10 +190,15 @@ public class MainFrame extends JFrame implements ActionListener{
 			new LoginFrame().setVisible(true); // 로그인화면 띄우기
 			setVisible(false); // 현재화면 안보이게
 		}
-
-		
 		
 	}
-	
+
+	public JButton getBtnLogin() {
+		return btnLogin;
+	}
+
+	public void setBtnLogin(JButton btnLogin) {
+		this.btnLogin = btnLogin;
+	}
 
 }

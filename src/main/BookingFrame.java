@@ -94,6 +94,7 @@ public class BookingFrame extends JFrame implements ActionListener, ListSelectio
     * Create the frame.
     */
    public BookingFrame() {
+	  setTitle("JAVA CINEMA 예매하기");
       setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
       setBounds(100, 100, 800, 600);
       contentPane = new JPanel();
