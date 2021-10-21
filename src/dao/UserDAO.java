@@ -208,8 +208,6 @@ public class UserDAO {
 	// 중복 체크 
 	public boolean getRow2(String userid) {
 	      boolean flag = false;
-
-
 		Connection con = null;
 		PreparedStatement pstmt = null;
 		try {
@@ -236,4 +234,3 @@ public class UserDAO {
 
 	}
 }
-

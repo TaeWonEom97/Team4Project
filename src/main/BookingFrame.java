@@ -277,6 +277,9 @@ public class BookingFrame extends JFrame implements ActionListener, ListSelectio
          lblNewLabel.setIcon(updateIcon2);
          lblmovie.setText((select.getSelectedValue()));
          lblmvcode.setText("M2");
+    	  lblNewLabel.setIcon(updateIcon2);
+    	  lblmovie.setText((select.getSelectedValue()));
+    	  lblmvcode.setText("M2");
       } else if (select.getSelectedValue().equals("보이스")) {
          lblNewLabel.setIcon(updateIcon3);
          lblmovie.setText((select.getSelectedValue()));
