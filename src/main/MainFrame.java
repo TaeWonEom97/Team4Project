@@ -163,7 +163,9 @@ public class MainFrame extends JFrame implements ActionListener{
 		String cmd = e.getActionCommand();
 		
 	      if (cmd.equals("영화 정보")) {
-			new MvInfo().setVisible(true);
+	    	MvInfo f=new MvInfo();
+	    	f.setUserid(userid);
+	    	f.setVisible(true);
 			setVisible(false); // 현재화면 안보이게
 			
 		} else if (cmd.equals("영화 예매")) {

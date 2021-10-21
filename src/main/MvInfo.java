@@ -46,7 +46,11 @@ public class MvInfo extends JFrame implements ActionListener , ListSelectionList
     ImageIcon updateIcon4 = new ImageIcon(updateImg4);
     
     private UserDAO dao;
-
+    String userid;
+    public void setUserid(String userid) {
+     	this.userid = userid;
+     }
+  
 	/**
 	 * Launch the application.
 	 */
@@ -118,7 +122,7 @@ public class MvInfo extends JFrame implements ActionListener , ListSelectionList
 	    	 MainFrame f=new MainFrame();
              f.getBtnLogin().setVisible(false);
              f.getBtnjoin().setVisible(false);
-             
+             f.setUserid(userid);
              f.setVisible(true);
              setVisible(false);
 	    }
