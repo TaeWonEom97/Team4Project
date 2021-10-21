@@ -118,7 +118,7 @@ public class MvInfo extends JFrame implements ActionListener , ListSelectionList
 	    	 MainFrame f=new MainFrame();
              f.getBtnLogin().setVisible(false);
              f.getBtnjoin().setVisible(false);
-         
+             
              f.setVisible(true);
              setVisible(false);
 	    }
