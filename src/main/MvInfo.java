@@ -23,7 +23,6 @@ import java.awt.BorderLayout;
 import java.awt.Toolkit;
 
 public class MvInfo extends JFrame implements ActionListener , ListSelectionListener {
-
 	private static final int String = 0;
 	private JPanel contentPane;
 	JList list;
@@ -47,7 +46,11 @@ public class MvInfo extends JFrame implements ActionListener , ListSelectionList
     ImageIcon updateIcon4 = new ImageIcon(updateImg4);
     
     private UserDAO dao;
-
+    String userid;
+    public void setUserid(String userid) {
+     	this.userid = userid;
+     }
+  
 	/**
 	 * Launch the application.
 	 */

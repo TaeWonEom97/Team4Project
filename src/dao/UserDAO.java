@@ -17,7 +17,7 @@ public class UserDAO {
 		}
 
 	}
-
+		// DB 연결 (호스트명, 아이디, 패스워드)
 	public static Connection getConnection() {
 		String url = "jdbc:oracle:thin:@localhost:1521:xe";
 		String user = "c##java";
@@ -31,7 +31,7 @@ public class UserDAO {
 		return con;
 	}
 
-	// 회원 가입
+	// 회원 가입 => DB 회원가입 테이블로 insert
 
 	public boolean insert(UserDTO dto) {
 		boolean flag = false;
@@ -64,7 +64,7 @@ public class UserDAO {
 
 	}
 
-	// 로그인
+	// 로그인 => 가입해서 insert 한 계정이 테이블에 있는지 확인
 
 	public UserDTO getRow(String userid, String userpwd) {
 		Connection con = null;
@@ -137,8 +137,7 @@ public class UserDAO {
 		}
 		return dto1;
 	}
-	
-	
+	// 예매 로그인한 아이디로 예매한 값들을 ch 테이블에 insert
 	public boolean insertMv(UserDTO dto) {
 		boolean flag = false;
 
@@ -174,7 +173,7 @@ public class UserDAO {
 		return flag;
 
 	}
-
+	//예매 취소 => ch 테이블로 insert 되었던 값들을 userid가 일치하면 전부 삭제
 	public boolean deleteMv(String userid) {
 
 		Connection con = null;
@@ -205,33 +204,33 @@ public class UserDAO {
 		
 	}
 
-	// 중복 체크
+
+	// 중복 체크 
 	public boolean getRow2(String userid) {
 	      boolean flag = false;
-	      Connection con = null;
-	      PreparedStatement pstmt = null;
-	      try {
-	         con = getConnection();
-	         String sql = "select * from customer_log where userid = ?";
-	         pstmt = con.prepareStatement(sql);
-	         pstmt.setString(1, userid);
-	         int result = pstmt.executeUpdate();
-	         if (result > 0) {
-	            flag = true;
-	         }
-	      } catch (Exception e) {
-	         e.printStackTrace();
-	      } finally {
-	         try {
-	            pstmt.close();
-	            con.close();
-	         } catch (Exception e2) {
-	            e2.printStackTrace();
-	         }
-	      }
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		try {
+			con = getConnection();
+			String sql = "select * from customer_log where userid = ?";
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, userid);
+			int result = pstmt.executeUpdate();
+			if (result > 0) {
+				flag = true;
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				pstmt.close();
+				con.close();
+			} catch (Exception e2) {
+				e2.printStackTrace();
+			}
+		}
+		return flag;
 
-	      return flag;
 
-	   }
-	
+	}
 }

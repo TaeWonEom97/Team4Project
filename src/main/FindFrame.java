@@ -122,7 +122,6 @@ public class FindFrame extends JFrame implements ActionListener {
           f.getBtnjoin().setVisible(false);
           f.setVisible(true);
           setVisible(false);
-         
       } else if (cmd.equals("예매취소")) {
          // 가진정보 지우고 로그인화면 띄우기
     	  if(dao.deleteMv(userid)==true) {

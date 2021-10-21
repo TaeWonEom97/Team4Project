@@ -48,6 +48,7 @@ public class BookingFrame extends JFrame implements ActionListener, ListSelectio
    JLabel lblloc;
    JLabel lbltime;
    
+   //예매창 내 영화 아이콘(클릭시 나타나기위함)
    ImageIcon icon1 = new ImageIcon(MainFrame.class.getResource("/main/007.jpg"));
    Image img1 = icon1.getImage();
    Image updateImg1 = img1.getScaledInstance(350, 250, Image.SCALE_SMOOTH);
@@ -263,7 +264,7 @@ public class BookingFrame extends JFrame implements ActionListener, ListSelectio
 
    }
    
-   @Override
+   
    public void valueChanged(ListSelectionEvent e) {
       // 선택한 영화에 따라서 이미지 변경
       
@@ -274,9 +275,9 @@ public class BookingFrame extends JFrame implements ActionListener, ListSelectio
          lblmovie.setText((select.getSelectedValue()));
          lblmvcode.setText("M1");
       } else if (select.getSelectedValue().equals("기적")) {
-         lblNewLabel.setIcon(updateIcon2);
-         lblmovie.setText((select.getSelectedValue()));
-         lblmvcode.setText("M2");
+    	  lblNewLabel.setIcon(updateIcon2);
+    	  lblmovie.setText((select.getSelectedValue()));
+    	  lblmvcode.setText("M2");
       } else if (select.getSelectedValue().equals("보이스")) {
          lblNewLabel.setIcon(updateIcon3);
          lblmovie.setText((select.getSelectedValue()));
