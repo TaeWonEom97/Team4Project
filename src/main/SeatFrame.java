@@ -109,15 +109,15 @@ public class SeatFrame extends JFrame implements ActionListener {
       this.mvCode = mvCode;
    }
    public void setUserId(String userid) {
-	      this.userid = userid;
-	   }
+         this.userid = userid;
+      }
    
    /**
     * Create the frame.
     */
 
    public SeatFrame() {
-   	setIconImage(Toolkit.getDefaultToolkit().getImage(SeatFrame.class.getResource("/main/movie.png")));
+      setIconImage(Toolkit.getDefaultToolkit().getImage(SeatFrame.class.getResource("/main/movie.png")));
 
       setTitle("JAVA CINEMA-좌석 선택하기");
       setTitle("JAVA CINEMA 좌석 선택");
@@ -129,250 +129,298 @@ public class SeatFrame extends JFrame implements ActionListener {
       setContentPane(contentPane);
       contentPane.setLayout(null);
 
-      JLabel lblNewLabel = new JLabel("원하는 좌석을 선택 해 주세요.");
+      JLabel lblNewLabel = new JLabel("좌석을 선택해 주세요.");
       lblNewLabel.setForeground(Color.LIGHT_GRAY);
       lblNewLabel.setBackground(Color.WHITE);
-      lblNewLabel.setFont(new Font("돋움", Font.BOLD, 28));
+      lblNewLabel.setFont(new Font("휴먼엑스포", Font.BOLD, 28));
       lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-      lblNewLabel.setBounds(194, 10, 426, 45);
+      lblNewLabel.setBounds(194, 10, 448, 45);
       contentPane.add(lblNewLabel);
 
       btnNewButton = new JButton("1");
+      btnNewButton.setFont(new Font("휴먼엑스포", Font.PLAIN, 15));
       btnNewButton.addActionListener(this);
       btnNewButton.setBounds(93, 92, 63, 55);
       contentPane.add(btnNewButton);
 
       btnNewButton_1 = new JButton("2");
+      btnNewButton_1.setFont(new Font("휴먼엑스포", Font.PLAIN, 15));
       btnNewButton_1.addActionListener(this);
       btnNewButton_1.setBounds(178, 92, 63, 55);
       contentPane.add(btnNewButton_1);
 
       btnNewButton_2 = new JButton("3");
+      btnNewButton_2.setFont(new Font("휴먼엑스포", Font.PLAIN, 15));
       btnNewButton_2.addActionListener(this);
       btnNewButton_2.setBounds(267, 92, 63, 55);
       contentPane.add(btnNewButton_2);
 
       btnNewButton_3 = new JButton("4");
+      btnNewButton_3.setFont(new Font("휴먼엑스포", Font.PLAIN, 15));
       btnNewButton_3.addActionListener(this);
       btnNewButton_3.setBounds(351, 92, 63, 55);
       contentPane.add(btnNewButton_3);
 
       btnNewButton_4 = new JButton("5");
+      btnNewButton_4.setFont(new Font("휴먼엑스포", Font.PLAIN, 15));
       btnNewButton_4.addActionListener(this);
       btnNewButton_4.setBounds(436, 92, 63, 55);
       contentPane.add(btnNewButton_4);
 
       btnNewButton_5 = new JButton("6");
+      btnNewButton_5.setFont(new Font("휴먼엑스포", Font.PLAIN, 15));
       btnNewButton_5.addActionListener(this);
       btnNewButton_5.setBounds(517, 92, 63, 55);
       contentPane.add(btnNewButton_5);
 
       btnNewButton_6 = new JButton("7");
+      btnNewButton_6.setFont(new Font("휴먼엑스포", Font.PLAIN, 15));
       btnNewButton_6.addActionListener(this);
       btnNewButton_6.setBounds(601, 92, 63, 55);
       contentPane.add(btnNewButton_6);
 
       btnNewButton_7 = new JButton("8");
+      btnNewButton_7.setFont(new Font("휴먼엑스포", Font.PLAIN, 15));
       btnNewButton_7.addActionListener(this);
       btnNewButton_7.setBounds(685, 92, 63, 55);
       contentPane.add(btnNewButton_7);
 
       btnNewButton_8 = new JButton("9");
+      btnNewButton_8.setFont(new Font("휴먼엑스포", Font.PLAIN, 15));
       btnNewButton_8.addActionListener(this);
       btnNewButton_8.setBounds(93, 185, 63, 55);
       contentPane.add(btnNewButton_8);
 
       btnNewButton_9 = new JButton("10");
+      btnNewButton_9.setFont(new Font("휴먼엑스포", Font.PLAIN, 15));
       btnNewButton_9.addActionListener(this);
       btnNewButton_9.setBounds(179, 185, 63, 55);
       contentPane.add(btnNewButton_9);
 
       btnNewButton_10 = new JButton("11");
+      btnNewButton_10.setFont(new Font("휴먼엑스포", Font.PLAIN, 15));
       btnNewButton_10.addActionListener(this);
       btnNewButton_10.setBounds(267, 185, 63, 55);
       contentPane.add(btnNewButton_10);
 
       btnNewButton_11 = new JButton("12");
+      btnNewButton_11.setFont(new Font("휴먼엑스포", Font.PLAIN, 15));
       btnNewButton_11.addActionListener(this);
       btnNewButton_11.setBounds(351, 185, 63, 55);
       contentPane.add(btnNewButton_11);
 
       btnNewButton_12 = new JButton("13");
+      btnNewButton_12.setFont(new Font("휴먼엑스포", Font.PLAIN, 15));
       btnNewButton_12.addActionListener(this);
       btnNewButton_12.setBounds(436, 185, 63, 55);
       contentPane.add(btnNewButton_12);
 
       btnNewButton_13 = new JButton("14");
+      btnNewButton_13.setFont(new Font("휴먼엑스포", Font.PLAIN, 15));
       btnNewButton_13.addActionListener(this);
       btnNewButton_13.setBounds(517, 185, 63, 55);
       contentPane.add(btnNewButton_13);
 
       btnNewButton_14 = new JButton("15");
+      btnNewButton_14.setFont(new Font("휴먼엑스포", Font.PLAIN, 15));
       btnNewButton_14.addActionListener(this);
       btnNewButton_14.setBounds(601, 185, 63, 55);
       contentPane.add(btnNewButton_14);
 
       btnNewButton_15 = new JButton("16");
+      btnNewButton_15.setFont(new Font("휴먼엑스포", Font.PLAIN, 15));
       btnNewButton_15.addActionListener(this);
       btnNewButton_15.setBounds(685, 185, 63, 55);
       contentPane.add(btnNewButton_15);
 
       btnNewButton_16 = new JButton("17");
+      btnNewButton_16.setFont(new Font("휴먼엑스포", Font.PLAIN, 15));
       btnNewButton_16.addActionListener(this);
       btnNewButton_16.setBounds(93, 280, 63, 55);
       contentPane.add(btnNewButton_16);
 
       btnNewButton_17 = new JButton("18");
+      btnNewButton_17.setFont(new Font("휴먼엑스포", Font.PLAIN, 15));
       btnNewButton_17.addActionListener(this);
       btnNewButton_17.setBounds(179, 280, 63, 55);
       contentPane.add(btnNewButton_17);
 
       btnNewButton_18 = new JButton("19");
+      btnNewButton_18.setFont(new Font("휴먼엑스포", Font.PLAIN, 15));
       btnNewButton_18.addActionListener(this);
       btnNewButton_18.setBounds(267, 280, 63, 55);
       contentPane.add(btnNewButton_18);
 
       btnNewButton_19 = new JButton("20");
+      btnNewButton_19.setFont(new Font("휴먼엑스포", Font.PLAIN, 15));
       btnNewButton_19.addActionListener(this);
       btnNewButton_19.setBounds(351, 280, 63, 55);
       contentPane.add(btnNewButton_19);
 
       btnNewButton_20 = new JButton("21");
+      btnNewButton_20.setFont(new Font("휴먼엑스포", Font.PLAIN, 15));
       btnNewButton_20.addActionListener(this);
       btnNewButton_20.setBounds(436, 280, 63, 55);
       contentPane.add(btnNewButton_20);
 
       btnNewButton_21 = new JButton("22");
+      btnNewButton_21.setFont(new Font("휴먼엑스포", Font.PLAIN, 15));
       btnNewButton_21.addActionListener(this);
       btnNewButton_21.setBounds(517, 280, 63, 55);
       contentPane.add(btnNewButton_21);
 
       btnNewButton_22 = new JButton("23");
+      btnNewButton_22.setFont(new Font("휴먼엑스포", Font.PLAIN, 15));
       btnNewButton_22.addActionListener(this);
       btnNewButton_22.setBounds(601, 280, 63, 55);
       contentPane.add(btnNewButton_22);
 
       btnNewButton_23 = new JButton("24");
+      btnNewButton_23.setFont(new Font("휴먼엑스포", Font.PLAIN, 15));
       btnNewButton_23.addActionListener(this);
       btnNewButton_23.setBounds(685, 280, 63, 55);
       contentPane.add(btnNewButton_23);
 
       btnNewButton_24 = new JButton("25");
+      btnNewButton_24.setFont(new Font("휴먼엑스포", Font.PLAIN, 15));
       btnNewButton_24.addActionListener(this);
       btnNewButton_24.setBounds(93, 373, 63, 55);
       contentPane.add(btnNewButton_24);
 
       btnNewButton_25 = new JButton("26");
+      btnNewButton_25.setFont(new Font("휴먼엑스포", Font.PLAIN, 15));
       btnNewButton_25.addActionListener(this);
       btnNewButton_25.setBounds(179, 373, 63, 55);
       contentPane.add(btnNewButton_25);
 
       btnNewButton_26 = new JButton("27");
+      btnNewButton_26.setFont(new Font("휴먼엑스포", Font.PLAIN, 15));
       btnNewButton_26.addActionListener(this);
       btnNewButton_26.setBounds(267, 373, 63, 55);
       contentPane.add(btnNewButton_26);
 
       btnNewButton_27 = new JButton("28");
+      btnNewButton_27.setFont(new Font("휴먼엑스포", Font.PLAIN, 15));
       btnNewButton_27.addActionListener(this);
       btnNewButton_27.setBounds(351, 373, 63, 55);
       contentPane.add(btnNewButton_27);
 
       btnNewButton_28 = new JButton("29");
+      btnNewButton_28.setFont(new Font("휴먼엑스포", Font.PLAIN, 15));
       btnNewButton_28.addActionListener(this);
       btnNewButton_28.setBounds(436, 373, 63, 55);
       contentPane.add(btnNewButton_28);
 
       btnNewButton_29 = new JButton("30");
+      btnNewButton_29.setFont(new Font("휴먼엑스포", Font.PLAIN, 15));
       btnNewButton_29.addActionListener(this);
       btnNewButton_29.setBounds(517, 373, 63, 55);
       contentPane.add(btnNewButton_29);
 
       btnNewButton_30 = new JButton("31");
+      btnNewButton_30.setFont(new Font("휴먼엑스포", Font.PLAIN, 15));
       btnNewButton_30.addActionListener(this);
       btnNewButton_30.setBounds(601, 373, 63, 55);
       contentPane.add(btnNewButton_30);
 
       btnNewButton_31 = new JButton("32");
+      btnNewButton_31.setFont(new Font("휴먼엑스포", Font.PLAIN, 15));
       btnNewButton_31.addActionListener(this);
       btnNewButton_31.setBounds(685, 373, 63, 55);
       contentPane.add(btnNewButton_31);
 
       btnNewButton_32 = new JButton("33");
+      btnNewButton_32.setFont(new Font("휴먼엑스포", Font.PLAIN, 15));
       btnNewButton_32.addActionListener(this);
       btnNewButton_32.setBounds(93, 465, 63, 55);
       contentPane.add(btnNewButton_32);
 
       btnNewButton_33 = new JButton("34");
+      btnNewButton_33.setFont(new Font("휴먼엑스포", Font.PLAIN, 15));
       btnNewButton_33.addActionListener(this);
       btnNewButton_33.setBounds(179, 465, 63, 55);
       contentPane.add(btnNewButton_33);
 
       btnNewButton_34 = new JButton("35");
+      btnNewButton_34.setFont(new Font("휴먼엑스포", Font.PLAIN, 15));
       btnNewButton_34.addActionListener(this);
       btnNewButton_34.setBounds(267, 465, 63, 55);
       contentPane.add(btnNewButton_34);
 
       btnNewButton_35 = new JButton("36");
+      btnNewButton_35.setFont(new Font("휴먼엑스포", Font.PLAIN, 15));
       btnNewButton_35.addActionListener(this);
       btnNewButton_35.setBounds(351, 465, 63, 55);
       contentPane.add(btnNewButton_35);
 
       btnNewButton_36 = new JButton("37");
+      btnNewButton_36.setFont(new Font("휴먼엑스포", Font.PLAIN, 15));
       btnNewButton_36.addActionListener(this);
       btnNewButton_36.setBounds(436, 465, 63, 55);
       contentPane.add(btnNewButton_36);
 
       btnNewButton_37 = new JButton("38");
+      btnNewButton_37.setFont(new Font("휴먼엑스포", Font.PLAIN, 15));
       btnNewButton_37.addActionListener(this);
       btnNewButton_37.setBounds(517, 465, 63, 55);
       contentPane.add(btnNewButton_37);
 
       btnNewButton_38 = new JButton("39");
+      btnNewButton_38.setFont(new Font("휴먼엑스포", Font.PLAIN, 15));
       btnNewButton_38.addActionListener(this);
       btnNewButton_38.setBounds(601, 465, 63, 55);
       contentPane.add(btnNewButton_38);
 
       btnNewButton_39 = new JButton("40");
+      btnNewButton_39.setFont(new Font("휴먼엑스포", Font.PLAIN, 15));
       btnNewButton_39.addActionListener(this);
       btnNewButton_39.setBounds(685, 465, 63, 55);
       contentPane.add(btnNewButton_39);
 
       btnNewButton_40 = new JButton("41");
+      btnNewButton_40.setFont(new Font("휴먼엑스포", Font.PLAIN, 15));
       btnNewButton_40.addActionListener(this);
       btnNewButton_40.setBounds(93, 558, 63, 55);
       contentPane.add(btnNewButton_40);
 
       btnNewButton_41 = new JButton("42");
+      btnNewButton_41.setFont(new Font("휴먼엑스포", Font.PLAIN, 15));
       btnNewButton_41.addActionListener(this);
       btnNewButton_41.setBounds(179, 558, 63, 55);
       contentPane.add(btnNewButton_41);
 
       btnNewButton_42 = new JButton("43");
+      btnNewButton_42.setFont(new Font("휴먼엑스포", Font.PLAIN, 15));
       btnNewButton_42.addActionListener(this);
       btnNewButton_42.setBounds(267, 558, 63, 55);
       contentPane.add(btnNewButton_42);
 
       btnNewButton_43 = new JButton("44");
+      btnNewButton_43.setFont(new Font("휴먼엑스포", Font.PLAIN, 15));
       btnNewButton_43.addActionListener(this);
       btnNewButton_43.setBounds(351, 558, 63, 55);
       contentPane.add(btnNewButton_43);
 
       btnNewButton_44 = new JButton("45");
+      btnNewButton_44.setFont(new Font("휴먼엑스포", Font.PLAIN, 15));
       btnNewButton_44.addActionListener(this);
       btnNewButton_44.setBounds(436, 558, 63, 55);
       contentPane.add(btnNewButton_44);
 
       btnNewButton_45 = new JButton("46");
+      btnNewButton_45.setFont(new Font("휴먼엑스포", Font.PLAIN, 15));
       btnNewButton_45.addActionListener(this);
       btnNewButton_45.setBounds(517, 558, 63, 55);
       contentPane.add(btnNewButton_45);
 
       btnNewButton_46 = new JButton("47");
+      btnNewButton_46.setFont(new Font("휴먼엑스포", Font.PLAIN, 15));
       btnNewButton_46.addActionListener(this);
       btnNewButton_46.setBounds(601, 558, 63, 55);
       contentPane.add(btnNewButton_46);
 
       btnNewButton_47 = new JButton("48");
+      btnNewButton_47.setFont(new Font("휴먼엑스포", Font.PLAIN, 15));
       btnNewButton_47.addActionListener(this);
       btnNewButton_47.setBounds(685, 558, 63, 55);
       contentPane.add(btnNewButton_47);
@@ -420,13 +468,13 @@ public class SeatFrame extends JFrame implements ActionListener {
       contentPane.add(lblNewLabel_1_5);
 
       JButton btnNewButton_48 = new JButton("예매하기");
-      btnNewButton_48.setFont(new Font("굴림", Font.BOLD, 14));
+      btnNewButton_48.setFont(new Font("휴먼엑스포", Font.PLAIN, 15));
       btnNewButton_48.setBounds(263, 634, 95, 35);
       btnNewButton_48.addActionListener(this);
       contentPane.add(btnNewButton_48);
 
       JButton btnNewButton_49 = new JButton("이전으로");
-      btnNewButton_49.setFont(new Font("굴림", Font.BOLD, 14));
+      btnNewButton_49.setFont(new Font("휴먼엑스포", Font.BOLD, 14));
       btnNewButton_49.setBounds(436, 634, 95, 35);
       btnNewButton_49.addActionListener(this);
       contentPane.add(btnNewButton_49);
@@ -2958,19 +3006,19 @@ public class SeatFrame extends JFrame implements ActionListener {
          dto.setMvcode(this.mvCode);
          dto.setSitnum(lblSeatNum.getText());
          if(dao.insertMv(dto)) {
-				
-				String List = "예매내역\n";
-				List += "영화제목 : " + mvName + "\n";
-				List += "상영지역 : " + mvLoc + "\n";
-				List += "상영시간 : " + mvTime + "\n";
-				List += "좌석번호 : " + lblSeatNum.getText() + "\n";
-				
-				JOptionPane.showMessageDialog(null, List, "예매완료", JOptionPane.INFORMATION_MESSAGE);
-				  MainFrame f=new MainFrame();
-	              f.getBtnLogin().setVisible(false);
-	              f.getBtnjoin().setVisible(false);
-	              f.setVisible(true);
-	              setVisible(false);
+            
+            String List = "예매내역\n";
+            List += "영화제목 : " + mvName + "\n";
+            List += "상영지역 : " + mvLoc + "\n";
+            List += "상영시간 : " + mvTime + "\n";
+            List += "좌석번호 : " + lblSeatNum.getText() + "\n";
+            
+            JOptionPane.showMessageDialog(null, List, "예매완료", JOptionPane.INFORMATION_MESSAGE);
+              MainFrame f=new MainFrame();
+                 f.getBtnLogin().setVisible(false);
+                 f.getBtnjoin().setVisible(false);
+                 f.setVisible(true);
+                 setVisible(false);
             
          }else {
             JOptionPane.showMessageDialog(null, "실패: 올바르게 작성해주세요");
