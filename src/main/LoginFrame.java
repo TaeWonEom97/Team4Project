@@ -103,13 +103,13 @@ public class LoginFrame extends JFrame {
       JLabel lblNewLabel = new JLabel("ID");
       lblNewLabel.setBounds(79, 27, 92, 45);
       lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-      lblNewLabel.setFont(new Font("휴먼엑스포", Font.BOLD, 18));
+      lblNewLabel.setFont(new Font("휴먼엑스포", Font.BOLD, 17));
       panel_2.add(lblNewLabel);
 
       JLabel lblPw = new JLabel("PW");
       lblPw.setBounds(66, 87, 117, 52);
       lblPw.setHorizontalAlignment(SwingConstants.CENTER);
-      lblPw.setFont(new Font("휴먼엑스포", Font.BOLD, 18));
+      lblPw.setFont(new Font("휴먼엑스포", Font.BOLD, 17));
       panel_2.add(lblPw);
 
       textField_1 = new JTextField();
