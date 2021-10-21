@@ -74,34 +74,38 @@ public class JoinFrame extends JFrame implements ActionListener {
       tfjoin.add(lblJoin);
 
       JLabel lblUsername = new JLabel("비밀번호");
-      lblUsername.setBounds(52, 164, 69, 20);
+      lblUsername.setFont(new Font("굴림", Font.PLAIN, 15));
+      lblUsername.setBounds(36, 168, 69, 20);
       tfjoin.add(lblUsername);
 
       JLabel label = new JLabel("아이디");
-      label.setBounds(52, 114, 69, 20);
+      label.setFont(new Font("굴림", Font.PLAIN, 15));
+      label.setBounds(36, 118, 69, 20);
       tfjoin.add(label);
 
       JLabel lblName = new JLabel("이름");
-      lblName.setBounds(52, 211, 69, 20);
+      lblName.setFont(new Font("굴림", Font.PLAIN, 15));
+      lblName.setBounds(36, 215, 69, 20);
       tfjoin.add(lblName);
 
       tfUsername = new JTextField();
       tfUsername.setColumns(10);
-      tfUsername.setBounds(142, 107, 186, 35);
+      tfUsername.setBounds(126, 111, 186, 35);
       tfjoin.add(tfUsername);
       // 버튼을 누르면 창 전환되는 것
 
       tfPassword = new JPasswordField();
       tfPassword.setColumns(10);
-      tfPassword.setBounds(142, 157, 186, 35);
+      tfPassword.setBounds(126, 161, 186, 35);
       tfjoin.add(tfPassword);
 
       tfName = new JTextField();
       tfName.setColumns(10);
-      tfName.setBounds(142, 204, 186, 35);
+      tfName.setBounds(126, 208, 186, 35);
       tfjoin.add(tfName);
 
       tfjoin2 = new JButton("\uD68C\uC6D0\uAC00\uC785");
+      tfjoin2.setFont(new Font("굴림", Font.PLAIN, 15));
       tfjoin2.addActionListener(new ActionListener() {
          public void actionPerformed(ActionEvent e) {
             String cmd = e.getActionCommand();
@@ -130,6 +134,7 @@ public class JoinFrame extends JFrame implements ActionListener {
       tfjoin.add(tfjoin2);
 
       tfcancel = new JButton("\uCDE8\uC18C");
+      tfcancel.setFont(new Font("굴림", Font.PLAIN, 15));
       tfcancel.addActionListener(new ActionListener() {
          public void actionPerformed(ActionEvent e) {
             new MainFrame().setVisible(true); // 조회화면 띄우기
@@ -140,8 +145,8 @@ public class JoinFrame extends JFrame implements ActionListener {
       tfjoin.add(tfcancel);
 
       dbcheck = new JButton("\uC911\uBCF5\uD655\uC778");
-      dbcheck.setFont(new Font("굴림", Font.PLAIN, 10));
-      dbcheck.setBounds(340, 111, 81, 28);
+      dbcheck.setFont(new Font("굴림", Font.PLAIN, 15));
+      dbcheck.setBounds(332, 112, 93, 35);
       dbcheck.addActionListener(new ActionListener() {
 
          @Override
