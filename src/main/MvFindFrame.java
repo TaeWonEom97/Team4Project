@@ -20,6 +20,7 @@ import java.awt.event.ActionListener;
 import javax.swing.BoxLayout;
 import java.awt.Color;
 import java.awt.Toolkit;
+import java.awt.Font;
 
 
 public class MvFindFrame extends JFrame{
@@ -57,6 +58,7 @@ public class MvFindFrame extends JFrame{
 		contentPane.setLayout(new BorderLayout(0, 0));
 		
 		JLabel lblNewLabel = new JLabel("아이디를 입력하시오");
+		lblNewLabel.setFont(new Font("휴먼엑스포", Font.PLAIN, 15));
 		lblNewLabel.setVerticalAlignment(SwingConstants.TOP);
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		contentPane.add(lblNewLabel, BorderLayout.NORTH);
@@ -74,6 +76,7 @@ public class MvFindFrame extends JFrame{
 		contentPane.add(panel_1, BorderLayout.SOUTH);
 		
 		JButton btnNewButton = new JButton("확인");
+		btnNewButton.setFont(new Font("휴먼엑스포", Font.PLAIN, 15));
 		panel_1.add(btnNewButton);
 		btnNewButton.addActionListener(new ActionListener() {
 			
@@ -89,6 +92,7 @@ public class MvFindFrame extends JFrame{
 		
 		
 		JButton btnNewButton_1 = new JButton("취소");
+		btnNewButton_1.setFont(new Font("휴먼엑스포", Font.PLAIN, 15));
 		panel_1.add(btnNewButton_1);
 		btnNewButton_1.addActionListener(new ActionListener() {
 			

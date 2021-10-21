@@ -129,14 +129,17 @@ public class MainFrame extends JFrame implements ActionListener{
 		panel_1.setLayout(new GridLayout(3, 1, 0, 20));
 		
 		JButton btn1 = new JButton("영화 정보");
+		btn1.setFont(new Font("휴먼엑스포", Font.PLAIN, 15));
 		btn1.addActionListener(this);
 		panel_1.add(btn1);
 		
 		JButton btn2 = new JButton("영화 예매");
+		btn2.setFont(new Font("휴먼엑스포", Font.PLAIN, 15));
 		btn2.addActionListener(this);
 		panel_1.add(btn2);
 		
 		JButton btn3 = new JButton("예매 조회");
+		btn3.setFont(new Font("휴먼엑스포", Font.PLAIN, 15));
 		btn3.addActionListener(this);
 		panel_1.add(btn3);
 		
@@ -148,10 +151,12 @@ public class MainFrame extends JFrame implements ActionListener{
 		panel_2.add(getBtnLogin());
 		
 		btnjoin = new JButton("회원가입");
+		btnjoin.setFont(new Font("휴먼엑스포", Font.PLAIN, 15));
 		btnjoin.addActionListener(this);
 		panel_2.add(btnjoin);
 		
 		JButton btnLogout = new JButton("로그아웃");
+		btnLogout.setFont(new Font("휴먼엑스포", Font.PLAIN, 15));
 		btnLogout.addActionListener(this);
 		panel_2.add(btnLogout);
 		
@@ -204,6 +209,7 @@ public class MainFrame extends JFrame implements ActionListener{
 
 	public void setBtnLogin(JButton btnLogin) {
 		this.btnLogin = btnLogin;
+		btnLogin.setFont(new Font("휴먼엑스포", Font.PLAIN, 15));
 	}
 
 }

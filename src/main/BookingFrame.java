@@ -48,7 +48,6 @@ public class BookingFrame extends JFrame implements ActionListener, ListSelectio
    JLabel lblloc;
    JLabel lbltime;
    
-   //예매창 내 영화 아이콘(클릭시 나타나기위함)
    ImageIcon icon1 = new ImageIcon(MainFrame.class.getResource("/main/007.jpg"));
    Image img1 = icon1.getImage();
    Image updateImg1 = img1.getScaledInstance(350, 250, Image.SCALE_SMOOTH);
@@ -73,7 +72,7 @@ public class BookingFrame extends JFrame implements ActionListener, ListSelectio
    String userid;
 
    public void setUserid(String userid) {
-	this.userid = userid;
+   this.userid = userid;
 }
 
 /**
@@ -96,9 +95,9 @@ public class BookingFrame extends JFrame implements ActionListener, ListSelectio
     * Create the frame.
     */
    public BookingFrame() {
-   	setTitle("JAVA CINEMA-영화 예매");
-   	setIconImage(Toolkit.getDefaultToolkit().getImage(BookingFrame.class.getResource("/main/movie.png")));
-	  setTitle("JAVA CINEMA 예매하기");
+      setTitle("JAVA CINEMA-영화 예매");
+      setIconImage(Toolkit.getDefaultToolkit().getImage(BookingFrame.class.getResource("/main/movie.png")));
+     setTitle("JAVA CINEMA 예매하기");
       setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
       setBounds(100, 100, 800, 600);
       contentPane = new JPanel();
@@ -235,13 +234,13 @@ public class BookingFrame extends JFrame implements ActionListener, ListSelectio
             JOptionPane.showMessageDialog(null, "영화, 지점, 시간을 선택해 주세요");
          } else {
 
-     		SeatFrame f=new SeatFrame();
-			f.setMvName(lblmovie.getText());
-			f.setMvLoc(lblloc.getText());
-			f.setMvTime(lbltime.getText());
-			f.setMvCode(lblmvcode.getText());
-			f.setUserId(userid);
-			f.setVisible(true); // 시간선택화면 띄우기
+           SeatFrame f=new SeatFrame();
+         f.setMvName(lblmovie.getText());
+         f.setMvLoc(lblloc.getText());
+         f.setMvTime(lbltime.getText());
+         f.setMvCode(lblmvcode.getText());
+         f.setUserId(userid);
+         f.setVisible(true); // 시간선택화면 띄우기
             setVisible(false); // 현재화면 안보이게
          }
 
@@ -264,7 +263,7 @@ public class BookingFrame extends JFrame implements ActionListener, ListSelectio
 
    }
    
-   
+   @Override
    public void valueChanged(ListSelectionEvent e) {
       // 선택한 영화에 따라서 이미지 변경
       
@@ -275,11 +274,17 @@ public class BookingFrame extends JFrame implements ActionListener, ListSelectio
          lblmovie.setText((select.getSelectedValue()));
          lblmvcode.setText("M1");
       } else if (select.getSelectedValue().equals("기적")) {
-
+         lblNewLabel.setIcon(updateIcon2);
+         lblmovie.setText((select.getSelectedValue()));
+         lblmvcode.setText("M2");
+      } else if (select.getSelectedValue().equals("보이스")) {
          lblNewLabel.setIcon(updateIcon3);
          lblmovie.setText((select.getSelectedValue()));
+         lblmvcode.setText("M2");
+      } else if (select.getSelectedValue().equals("보이스")) {
+         lblNewLabel.setIcon(updateIcon2);
+         lblmovie.setText((select.getSelectedValue()));
          lblmvcode.setText("M3");
-    
       } else if (select.getSelectedValue().equals("극장판 짱구는 못말려")) {
          lblNewLabel.setIcon(updateIcon4);
          lblmovie.setText((select.getSelectedValue()));
