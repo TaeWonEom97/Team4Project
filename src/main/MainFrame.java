@@ -55,6 +55,7 @@ public class MainFrame extends JFrame implements ActionListener{
 
 	public void setUserid(String userid) {
 		this.userid = userid;
+		
 	}
     
 	public static void main(String[] args) {
@@ -75,13 +76,10 @@ public class MainFrame extends JFrame implements ActionListener{
 	 */
 
 	public MainFrame() {
-		setTitle("JAVA CINEMA");
-		setIconImage(Toolkit.getDefaultToolkit().getImage(MainFrame.class.getResource("/main/movie.png")));
-
-	
-
 		
-		setTitle("JAVA CINEMA");
+	      setTitle("JAVA CINEMA");
+	      setIconImage(Toolkit.getDefaultToolkit().getImage(MainFrame.class.getResource("/main/movie.png")));
+
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 800, 600);
 		contentPane = new JPanel();
@@ -159,7 +157,6 @@ public class MainFrame extends JFrame implements ActionListener{
 		
 		
 
-		
 	}
 
 	public void actionPerformed(ActionEvent e) {
