@@ -48,6 +48,7 @@ public class BookingFrame extends JFrame implements ActionListener, ListSelectio
    JLabel lblloc;
    JLabel lbltime;
    
+   //예매창 내 영화 아이콘(클릭시 나타나기위함)
    ImageIcon icon1 = new ImageIcon(MainFrame.class.getResource("/main/007.jpg"));
    Image img1 = icon1.getImage();
    Image updateImg1 = img1.getScaledInstance(350, 250, Image.SCALE_SMOOTH);
